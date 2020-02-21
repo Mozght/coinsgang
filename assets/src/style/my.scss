@@ -149,7 +149,8 @@ body {
     background-size: 660px;
     margin-bottom: 60px;
   }
-  @media (max-height: 1300px) {
+
+  @media (max-height: 1300px) and (max-width: 1200px) and (min-width: 640px) {
       height: 1300px;
       min-height: 1300px;
       max-height: 1300px;
@@ -452,7 +453,7 @@ ul {
 .gallery_container {
   background: $black;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;

@@ -7539,7 +7539,7 @@ body {
       background-position: left -40px bottom;
       background-size: 660px;
       margin-bottom: 60px; } }
-  @media (max-height: 1300px) {
+  @media (max-height: 1300px) and (max-width: 1200px) and (min-width: 640px) {
     .godfather {
       height: 1300px;
       min-height: 1300px;
@@ -7778,7 +7778,7 @@ ul li {
 .gallery_container {
   background: #0f0f0f;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
