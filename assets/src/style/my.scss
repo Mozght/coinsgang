@@ -453,7 +453,7 @@ ul {
 .gallery_container {
   background: $black;
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   top: 0;
   left: 0;
   right: 0;
@@ -470,27 +470,16 @@ ul {
     right: 100px;
     font-size: 0.8em;
     color: $darkgray2;
-    @media (max-width: 1440px) {
-      top: 50px;
-      right: 50px;
-    }
-    @media (max-width: 1280px) {
-      top: 30px;
-      right: 30px;
-    }
-    @media (max-width: 420px) {
-      top: 30px;
-      right: 30px;
-    }
-    @media (min-width: 1921px) {
-      top: 50px;
-    }
+    padding: 10px 20px;
+    background: $black;
+    top: 30px;
+    right: 30px;
   }
 
   #gallery {
     width: 840px;
 
-    @media (max-width: 420px) {
+    @media (max-width: 840px) {
       width: 80%;
     }
 
