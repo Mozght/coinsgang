@@ -754,6 +754,11 @@ $colors: (
   padding-top: 120px;
   max-width: 850px;
   margin: 0 auto;
+  a {
+    &:hover {
+      color: $white;
+    }
+  }
   @include media-breakpoint-down(xs) {
     padding-top: 60px;
   }
@@ -776,6 +781,10 @@ $colors: (
     justify-content: space-between;
     position:relative;
     cursor: pointer;
+    font-size: 24px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 40px;
+    }
     &:after {
       content: '';
       width: 20px;
@@ -819,6 +828,12 @@ $colors: (
   }
   .form-group {
     margin-bottom: 40px;
+    .form-control{
+      &:focus {
+        box-shadow: none;
+        outline: 1px solid $white;
+      }
+    }
     @include media-breakpoint-down(xs) {
       margin-bottom: 20px;
     }
@@ -828,6 +843,10 @@ $colors: (
       border:0;
       height: 60px;
       font-size: 20px;
+      padding-left: 20px;
+    }
+    #telephone {
+      padding-left: 60px;
     }
   }
   .total {
@@ -870,6 +889,10 @@ $colors: (
   }
 }
 
+.custom-control {
+  cursor: pointer;
+}
+
 .custom-control.custom-checkbox .custom-control-label::before {
   border: none;
 }
@@ -900,13 +923,12 @@ $colors: (
   width: 20px;
   height: 20px;
   top: 4px;
+  cursor: pointer;
 }
 .custom-control-label::after {
   width: 20px;
   height: 20px;
 }
-
-
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
   width: 20px;
@@ -926,7 +948,24 @@ $colors: (
 .iti--allow-dropdown {
   width: 100%;
 }
+
+.iti__country {
+  height:60px;
+}
+.iti__flag-container {
+  width: 100%;
+}
+.iti__selected-flag {
+  padding-left: 15px;
+  box-shadow: none;
+  outline: none;
+  border:0;
+  &:focus {
+    outline: 1px solid $white;
+  }
+}
 .iti__country-list {
+  width: 100%;
   background: $black2;
   border:1px solid $black2;
   .iti__divider {
