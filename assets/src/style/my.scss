@@ -243,61 +243,36 @@ a {
 }
 
 .bar {
+  transform-origin: 0 0;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   background: $black;
-  width: 80px;
+  width: 100vh;
+  height: 80px;
   z-index: 101;
+  display: flex;
   cursor: pointer;
-  transition: all ease-out 0.5s;
+  transition: all ease-out 0.3s;
   border-right: 1px solid $darkgray;
-  .hashtag {
-    transform-origin: 0 0;
-    transform: translateY(99px) rotate(270deg);
+  transform: rotate(270deg);
+  align-items: center;
+  top: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+  &>a {
+    margin-right: 40px;
     font-size: 24px;
-    position: absolute;
-    top: 60px;
-    left: 17px;
     color: $white;
-  }
-
-  .see_program {
-    transform-origin: 0 0;
-    color: $darkgray2;
-    font-size: 24px;
-    position: absolute;
-    bottom: 55px;
-    left: 17px;
     display: block;
-    transform: rotate(270deg);
-    white-space: nowrap;
+  }
+  .hashtag {
+    //transform-origin: 0 0;
+    //transform: translateY(99px) rotate(270deg);
+    font-size: 24px;
+    margin-left: auto;
     color: $white;
-
-    @media (max-height: 425px) {
-      bottom: 20px;
-    }
-
-    &::before {
-      content: '';
-      width: 20px;
-      height: 16px;
-      background: url("../img/arrow2x.png") no-repeat center center;
-      background-size: contain;
-      display: block;
-      position: absolute;
-      left: -40px;
-      top: 0.6em;
-      transition-duration: 0.2s;
-      transition-property: transform;
-      transform: rotate(90deg);
-      @media (max-width: 375px) {
-        width: 16px;
-        left: -25px;
-        top: 0.5em;
-      }
-    }
   }
   &.active {
     background: $white;
@@ -305,67 +280,52 @@ a {
     .hashtag, .see_program {
       color: $black;
     }
-    .see_program {
-      &::before {
-        background-image: url("../img/arrow2x_i.png");
+    .see_program, .see_offer, .see_speakers {
+      color: $darkgray2;
+      &:hover {
+        color: $black;
+      }
+      &.active {
+        color: $black;
       }
     }
   }
   @media (max-width: 768px) {
     width: 100%;
     height: 80px;
+    top:0;
+    transform: rotate(0);
     border-bottom: 1px solid $darkgray;
     &.active {
       border-bottom: 1px solid transparent;
     }
-    .hashtag {
-      transform: translateY(0) rotate(0);
-      right: 80px;
-      top: 20px;
-      left: auto;
-    }
-
-    .see_program {
-      transform: rotate(0);
-      top: 20px;
-      left: 106px;
-      bottom: auto;
-
-      &::before {
-        top: 10px;
-        left: -30px;
-      }
-    }
   }
   @media (max-width: 640px) {
-    .hashtag {
-      right: 40px;
+    padding:0 40px;
+    &>a {
+      font-size: 18px;
     }
-
-    .see_program {
-      left: 66px;
+  }
+  @media (max-width: 500px) {
+    padding:0 15px;
+    .hashtag{
+      font-size: 18px;
+    }
+    &>a {
+      margin-right: 20px;
+    }
+  }
+  @media (max-width: 370px) {
+    .hashtag{
+      font-size: 16px;
+    }
+    &>a {
+      font-size: 16px;
+      margin-right: 13px;
     }
   }
   @media (max-width: 420px) {
     height: 40px;
-
-    .hashtag {
-      right: 20px;
-      font-size: 14px;
-      top: 5px;
-    }
-
-    .see_program {
-      top: 5px;
-      left: 33px;
-      font-size: 14px;
-
-      &::before {
-        width: 12px;
-        top: 7px;
-        left: -20px;
-      }
-    }
   }
 }
 
@@ -524,6 +484,35 @@ ul {
   }
 }
 
+.pannels{
+  &.active {
+    &+.bar {
+      background: $white;
+      .hashtag {
+        color: $black;
+      }
+      &>a {
+        color: $darkgray2;
+        &.active {
+          color: $black;
+        }
+      }
+      &.active {
+        background: $black;
+        &>a,.hashtag {
+          color: $darkgray2;
+          &:hover {
+            color: $white;
+          }
+        }
+        .active {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
 .program {
   position: fixed;
   opacity: 0;
@@ -534,34 +523,18 @@ ul {
   color: $black;
   left: -100%;
   top: 0;
-  width: calc(100% - 80px );
+  width: 100%;
   height: 100%;
   z-index: 99;
   transition: all ease-out 0.3s;
-  &.active {
-    left: 80px;
-    &+.bar {
-      background: $white;
-      .see_program,.hashtag {
-        color: $black;
-      }
-      .see_program {
-        &::before {
-          transform: rotate(270deg);
-          background-image: url("../img/arrow2x_i.png");
-        }
-      }
-      &.active {
-        background: $black;
-        .see_program,.hashtag {
-          color: $white;
-        }
-        .see_program {
-          &::before {
-            background-image: url("../img/arrow2x.png");
-          }
-        }
-      }
+  &.see_program {
+    &.active {
+      left: 0;
+    }
+  }
+  &.see_speakers {
+    &.active {
+      left: 0;
     }
   }
   ul,li {
@@ -666,6 +639,46 @@ ul {
     }
   }
 }
+
+.see_speakers {
+  h2 {
+    margin-bottom: 110px;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 55px;
+    }
+  }
+  .speaker {
+    margin-bottom: 70px;
+    &:nth-child(even) {
+      transform: translateY(80px);
+      @include media-breakpoint-down(xs) {
+        transform: translateY(0);
+      }
+    }
+    .img_container{
+      width: 270px;
+      margin-bottom: 30px;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    h3 {
+      font-size: 1.15em;
+    }
+    p {
+      width: 270px;
+      font-size: 0.7em;
+      line-height: 1.5em;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+  }
+}
+
 
 
 @keyframes pulse {
