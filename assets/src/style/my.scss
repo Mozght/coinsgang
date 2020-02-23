@@ -150,7 +150,7 @@ body {
     margin-bottom: 60px;
   }
 
-  @media (max-height: 1300px) and (max-width: 1200px) and (min-width: 640px) {
+  @media (max-height: 1300px) and (max-width: 1024px) and (min-width: 640px) {
       height: 1300px;
       min-height: 1300px;
       max-height: 1300px;
@@ -526,6 +526,7 @@ ul {
 
 .program {
   position: fixed;
+  opacity: 0;
   padding-top: 105px;
   padding-bottom: 160px;
   overflow-y: scroll;
@@ -701,5 +702,12 @@ $colors: (
   &:hover {
     border-color: var(--hover);
     color: $white;
+  }
+}
+
+.container>.row {
+  transform:translateX(40px);
+  @media (max-width: 768px) {
+    transform:translateX(0);
   }
 }
