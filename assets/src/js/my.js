@@ -52,19 +52,32 @@ $(document).ready(function(){
   */
   $('.bar>a').click(function(e){
     e.preventDefault();
-    if($(this).hasClass('active')) {
-      $(this).removeClass('active');
-      $('.program.active').removeClass('active');
-      $('.pannels').removeClass('active');
-    }
-    else {
-      $('.pannels').addClass('active')
-      $('.program').removeClass('active')
-      $('.bar>a').removeClass('active');
-      $('.program.active').removeClass('active').css('opacity',0);
-      var attr = $(this).data('id');
-      $('.'+attr+'.program').css('opacity',1).addClass('active');
-      $(this).addClass('active');
+    if(!$(this).hasClass('active')) {
+      if ($(this).data('id') === 'see_offer') {
+        $('.program').removeClass('active').css('opacity', 0);
+        $('.pannels').removeClass('active').css('opacity', 0);
+        $('.bar>a').removeClass('active');
+        $(this).addClass('active');
+      } else {
+        $('.pannels').addClass('active').css('opacity', 1);
+        $('.bar>a').removeClass('active');
+        var program_active = $('.program.active');
+        var attr = $(this).data('id');
+        $('.' + attr + '.program').css('opacity', 1).addClass('active');
+        $(this).addClass('active');
+        program_active.removeClass('active').css('opacity', 0);
+      }
     }
   });
+
+  $('.checkout .offer').click(function(){
+    $('.checkout .offer').removeClass('active').find('input[type=radio]').prop("checked", false);
+    $(this).addClass('active');
+    $(this).find('input[type=radio]').prop("checked", true);
+    var price = $(this).data('price');
+    $('#total_value').text(price);
+  })
+
+  window.intlTelInput(document.querySelector("#telephone"));
+
 });

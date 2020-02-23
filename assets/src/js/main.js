@@ -18,5 +18,6 @@
 //= ../../../node_modules/bootstrap/js/dist/tab.js
 //= ../../../node_modules/bootstrap/js/dist/toast.js
 //= ../../../node_modules/owl.carousel2/dist/owl.carousel.min.js
+//= ../../../node_modules/intl-tel-input/build/js/intlTelInput.js
 // Импортируем другие js-файлы
 //= my.js
