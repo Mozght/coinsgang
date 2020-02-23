@@ -870,7 +870,11 @@ $colors: (
   }
 }
 
-.custom-checkbox {
+.custom-control.custom-checkbox .custom-control-label::before {
+  border: none;
+}
+
+.custom-control.custom-checkbox {
   .custom-control-label {
     font-size: 18px;
     padding-left: 10px;
@@ -880,7 +884,7 @@ $colors: (
       width: 20px;
       height: 20px;
       border-radius: 0;
-      border-color: $darkgray;
+      border: 1px solid $darkgray !important;
       background-color: $black;
     }
   }
@@ -897,11 +901,22 @@ $colors: (
   height: 20px;
   top: 4px;
 }
+.custom-control-label::after {
+  width: 20px;
+  height: 20px;
+}
+
+
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
   width: 20px;
   height: 20px;
   background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23333333' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e")
+}
+
+.custom-control-input:not(:disabled):active~.custom-control-label::before {
+  background-color: transparent;
+  border-color: $white;
 }
 
 .custom-control-input:focus~.custom-control-label::before {
