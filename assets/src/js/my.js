@@ -24,10 +24,10 @@ $(document).ready(function(){
   $('.bar').click(function(e){
     e.preventDefault();
     if ($('.program').hasClass('active')) {
-      $('.program').removeClass('active');
+      $('.program').removeClass('active').css('opacity',0);
     }
     else {
-      $('.program').addClass('active');
+      $('.program').css('opacity',1).addClass('active');
     }
   });
 });

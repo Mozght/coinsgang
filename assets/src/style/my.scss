@@ -149,7 +149,8 @@ body {
     background-size: 660px;
     margin-bottom: 60px;
   }
-  @media (max-height: 1300px) {
+
+  @media (max-height: 1300px) and (max-width: 1024px) and (min-width: 640px) {
       height: 1300px;
       min-height: 1300px;
       max-height: 1300px;
@@ -452,7 +453,7 @@ ul {
 .gallery_container {
   background: $black;
   position: fixed;
-  z-index: 99;
+  z-index: 998;
   top: 0;
   left: 0;
   right: 0;
@@ -469,27 +470,16 @@ ul {
     right: 100px;
     font-size: 0.8em;
     color: $darkgray2;
-    @media (max-width: 1440px) {
-      top: 50px;
-      right: 50px;
-    }
-    @media (max-width: 1280px) {
-      top: 30px;
-      right: 30px;
-    }
-    @media (max-width: 420px) {
-      top: 30px;
-      right: 30px;
-    }
-    @media (min-width: 1921px) {
-      top: 50px;
-    }
+    padding: 10px 20px;
+    background: $black;
+    top: 30px;
+    right: 30px;
   }
 
   #gallery {
     width: 840px;
 
-    @media (max-width: 420px) {
+    @media (max-width: 840px) {
       width: 80%;
     }
 
@@ -536,6 +526,7 @@ ul {
 
 .program {
   position: fixed;
+  opacity: 0;
   padding-top: 105px;
   padding-bottom: 160px;
   overflow-y: scroll;
@@ -711,5 +702,12 @@ $colors: (
   &:hover {
     border-color: var(--hover);
     color: $white;
+  }
+}
+
+.container>.row {
+  transform:translateX(40px);
+  @media (max-width: 768px) {
+    transform:translateX(0);
   }
 }

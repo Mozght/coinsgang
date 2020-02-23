@@ -4,3 +4,21 @@ $white : #fafaf8;
 $darkgray: #333333;
 $darkgray2: #666666;
 $purple: #781e48;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 960px,
+        md: 1024px,
+        lg: 1260px,
+        xl: 1440px,
+        xxl: 1600px
+);
+
+$container-max-widths: (
+        xs: 560px,
+        sm: 720px,
+        md: 880px,
+        lg: 1160px,
+        xl: 1320px,
+        xxl: 1400px
+);
