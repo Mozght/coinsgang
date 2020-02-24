@@ -263,6 +263,13 @@ a {
   top: 100%;
   padding-left: 60px;
   padding-right: 60px;
+  .coinsbank {
+    margin-left: 20px;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
   &>a {
     margin-right: 40px;
     font-size: 24px;
@@ -281,6 +288,7 @@ a {
     font-size: 24px;
     margin-left: auto;
     color: $white;
+    line-height: 0;
   }
   &.active {
     background: $white;

@@ -9115,6 +9115,11 @@ a {
   top: 100%;
   padding-left: 60px;
   padding-right: 60px; }
+  .bar .coinsbank {
+    margin-left: 20px; }
+    .bar .coinsbank img {
+      width: 40px;
+      height: 40px; }
   .bar > a {
     margin-right: 40px;
     font-size: 24px;
@@ -9127,7 +9132,8 @@ a {
   .bar .hashtag {
     font-size: 24px;
     margin-left: auto;
-    color: #fafaf8; }
+    color: #fafaf8;
+    line-height: 0; }
   .bar.active {
     background: #fafaf8;
     border-right: 1px solid transparent; }
