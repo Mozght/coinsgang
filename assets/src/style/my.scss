@@ -97,7 +97,9 @@ body {
   z-index: 0;
   padding: 150px 0 0;
   margin-bottom: 200px;
-
+  &.mcafee {
+    background-image: url("../img/mcafee.jpg");
+  }
   @media (min-width: 1280px) {
     .upper_block {
       .col-xl-6 {
@@ -266,6 +268,9 @@ a {
     font-size: 24px;
     color: $darkgray2;
     display: block;
+    &:hover {
+      color: $white;
+    }
     &.active {
       color: $white;
     }
@@ -514,6 +519,9 @@ ul {
       }
       &>a {
         color: $darkgray2;
+        &:hover {
+          color: $black;
+        }
         &.active {
           color: $black;
         }
@@ -713,9 +721,8 @@ ul {
   height: min-content;
 }
 
-.buynow:focus,
 .buynow:hover {
-  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+  box-shadow: inset -170px 0 0 0 var(--hover), inset 170px 0 0 0 var(--hover);
 }
 $colors: (
   buynow: $white,
@@ -732,7 +739,6 @@ $colors: (
   transition: 0.25s;
   min-width: 105px;
 
-  &:focus,
   &:hover {
     border-color: var(--hover);
     color: $white;

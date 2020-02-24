@@ -16,11 +16,13 @@ $(document).ready(function(){
     e.preventDefault();
     $('.gallery_container').fadeOut(200);
   });
+  /*
   $('.bar').hover(function(){
     $(this).addClass('active');
   },function(){
     $(this).removeClass('active');
   });
+  */
   /*
   $('.bar .see_program').click(function(e){
     e.preventDefault();
