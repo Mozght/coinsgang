@@ -9123,7 +9123,9 @@ a {
     margin-right: 40px;
     font-size: 24px;
     color: #666666;
-    display: block; }
+    display: block;
+    height: 40px;
+    line-height: 34px; }
     .bar > a:hover {
       color: #fafaf8; }
     .bar > a.active {
@@ -9132,7 +9134,9 @@ a {
     font-size: 24px;
     margin-left: auto;
     color: #fafaf8;
-    line-height: 0; }
+    line-height: 0;
+    height: 40px;
+    line-height: 30px; }
   .bar.active {
     background: #fafaf8;
     border-right: 1px solid transparent; }
@@ -9153,27 +9157,63 @@ a {
       border-bottom: 1px solid #333333; }
       .bar.active {
         border-bottom: 1px solid transparent; } }
-  @media (max-width: 640px) {
+  @media (max-width: 669px) {
     .bar {
-      padding: 0 40px; }
-      .bar > a {
-        font-size: 18px; } }
-  @media (max-width: 500px) {
+      padding: 0 40px; } }
+  @media (max-width: 640px) {
+    .bar > a {
+      font-size: 18px; } }
+  @media (max-width: 563px) {
     .bar {
       padding: 0 15px; }
+      .bar .coinsbank img {
+        width: 30px;
+        height: 30px; }
       .bar .hashtag {
         font-size: 18px; }
       .bar > a {
         margin-right: 20px; } }
-  @media (max-width: 370px) {
+  @media (max-width: 420px) {
+    .bar {
+      height: 40px; }
+      .bar .hashtag {
+        line-height: 35px; }
+      .bar .coinsbank {
+        margin-left: 10px; }
+        .bar .coinsbank img {
+          width: 20px;
+          height: 20px; } }
+  @media (max-width: 400px) {
     .bar .hashtag {
       font-size: 16px; }
     .bar > a {
       font-size: 16px;
       margin-right: 13px; } }
-  @media (max-width: 420px) {
+  @media (max-width: 380px) {
+    .bar > a, .bar .hashtag {
+      font-size: 14px; } }
+  @media (max-width: 320px) {
+    .bar > a, .bar .hashtag {
+      font-size: 13px; } }
+  @media (min-width: 768px) and (max-height: 671px) {
     .bar {
-      height: 40px; } }
+      padding: 0 40px; } }
+  @media (min-width: 768px) and (max-height: 630px) {
+    .bar > a, .bar .hashtag {
+      font-size: 20px; } }
+  @media (min-width: 768px) and (max-height: 570px) {
+    .bar > a, .bar .hashtag {
+      font-size: 18px; }
+    .bar > a {
+      margin-right: 15px; }
+    .bar .coinsbank {
+      margin-left: 15px; }
+      .bar .coinsbank img {
+        width: 30px;
+        height: 30px; } }
+  @media (min-width: 768px) and (max-height: 450px) {
+    .bar {
+      padding: 0 15px; } }
 
 li,
 ul {
