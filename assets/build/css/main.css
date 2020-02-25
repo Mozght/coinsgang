@@ -9332,7 +9332,10 @@ ul li {
         background-size: 12px 20px;
         top: -25px;
         text-indent: -99999px;
-        cursor: poiner; }
+        cursor: pointer;
+        opacity: 0.7; }
+        .gallery_container #gallery .owl-nav [class*=owl-]:hover {
+          opacity: 1; }
       @media (max-width: 1140px) {
         .gallery_container #gallery .owl-nav .owl-prev {
           left: 20px; }
