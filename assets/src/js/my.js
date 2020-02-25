@@ -2,7 +2,7 @@ $(document).ready(function(){
   $('#gallery').owlCarousel({
       loop:true,
       margin:40,
-      nav:false,
+      nav:true,
       items:1,
       dots: false
   });
