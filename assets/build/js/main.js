@@ -19852,4 +19852,8 @@ $(document).ready(function(){
 
   window.intlTelInput(document.querySelector("#telephone"));
 
+  $('#become_sponsor').on('click',function(e){
+    e.preventDefault();
+    $('.thanks').css('display','flex');
+  });
 });
