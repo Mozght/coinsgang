@@ -19822,25 +19822,29 @@ $(document).ready(function(){
     }
   });
   */
-  $('.bar>a').click(function(e){
-    e.preventDefault();
-    if(!$(this).hasClass('active')) {
-      if ($(this).data('id') === 'see_offer') {
-        $('.program').removeClass('active').css('opacity', 0);
-        $('.pannels').removeClass('active').css('opacity', 0);
-        $('.bar>a').removeClass('active');
-        $(this).addClass('active');
-      } else {
-        $('.pannels').addClass('active').css('opacity', 1);
-        $('.bar>a').removeClass('active');
-        var program_active = $('.program.active');
-        var attr = $(this).data('id');
-        $('.' + attr + '.program').css('opacity', 1).addClass('active');
-        $(this).addClass('active');
-        program_active.removeClass('active').css('opacity', 0);
+  /*
+  if (!$('body').hasClass('white')) {
+    $('.bar>a').click(function(e){
+      e.preventDefault();
+      if(!$(this).hasClass('active')) {
+        if ($(this).data('id') === 'see_offer') {
+          $('.program').removeClass('active').css('opacity', 0);
+          $('.pannels').removeClass('active').css('opacity', 0);
+          $('.bar>a').removeClass('active');
+          $(this).addClass('active');
+        } else {
+          $('.pannels').addClass('active').css('opacity', 1);
+          $('.bar>a').removeClass('active');
+          var program_active = $('.program.active');
+          var attr = $(this).data('id');
+          $('.' + attr + '.program').css('opacity', 1).addClass('active');
+          $(this).addClass('active');
+          program_active.removeClass('active').css('opacity', 0);
+        }
       }
-    }
-  });
+    });
+  }
+  */
 
   $('.checkout .offer').click(function(){
     $('.checkout .offer').removeClass('active').find('input[type=radio]').prop("checked", false);
@@ -19854,6 +19858,7 @@ $(document).ready(function(){
 
   $('#become_sponsor').on('click',function(e){
     e.preventDefault();
+    $('.thanks').prev('.sponsor').css('opacity',0);
     $('.thanks').css('display','flex');
   });
 });

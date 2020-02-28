@@ -4,12 +4,15 @@
 }
 
 body {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: $font1;
   color: $white;
   font-size: 32px;
   line-height: 1.35em;
   background: $black;
   padding: 0 0 6em;
+  p, input {
+    font-family: $font2;
+  }
   @media (max-width: 1280px) {
     font-size: 28px;
   }
@@ -19,6 +22,11 @@ body {
   @media (max-width: 420px) {
     font-size: 20px;
   }
+}
+
+.h-center {
+  align-items: center;
+  display: flex;
 }
 
 .login {
@@ -129,6 +137,13 @@ body {
       display: none;
     }
   }
+  @media (max-width: 1024px) {
+    .col-lg-4.col-md-6 {
+      flex: 100%;
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
   @media (max-width: 768px) and (max-height: 1024px) {
     height: 100vh;
   }
@@ -144,8 +159,8 @@ body {
     padding-top: 200px;
   }
   @media (max-width: 420px) {
-    height: 950px;
-    padding-top: 110px;
+    height: 1000px;
+    padding-top: 60px;
     min-height: 0;
     background-position: left -40px bottom;
     background-size: 660px;
@@ -156,6 +171,28 @@ body {
       height: 1300px;
       min-height: 1300px;
       max-height: 1300px;
+  }
+  .h1 {
+    font-size: 1.8em !important;
+    margin-bottom: 40px;
+    &.date {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 36px;
+      @media (max-width: 640px) {
+        font-size: 22px;
+        margin-top: 10px;
+      }
+    }
+  }
+  p {
+    font-family: $font1 !important;
+    &.down {
+      font-size: 18px;
+      line-height: 28px;
+      display: block;
+    }
   }
 }
 
@@ -169,6 +206,15 @@ a {
   &:hover {
     text-decoration: none;
     color: darken($white,20%);
+  }
+}
+
+h1 {
+  &.hashtag {
+    color: $blue;
+    font-size: 40px;
+    margin-bottom: 145px;
+    padding-left: 40px;
   }
 }
 
@@ -238,10 +284,16 @@ a {
   }
 }
 
+
+
 .h3 {
   text-transform: uppercase;
   font-size: 1.3em;
   margin-bottom: 1.5em;
+  &.location {
+    text-transform: capitalize;
+    margin-bottom: 0.5em;
+  }
 }
 
 .bar {
@@ -404,6 +456,8 @@ a {
   }
 }
 
+
+
 li,
 ul {
   padding: 0;
@@ -451,8 +505,13 @@ ul {
     border-radius: 0;
     text-transform: uppercase;
     font-size: 0.8em;
-    padding: 0.6em 1.5em;
-
+    padding: 0 1.5em;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    @media (max-width: 640px) {
+      height: 40px;
+    }
     &:hover {
       background: $white;
       color: $black;
@@ -613,18 +672,20 @@ ul {
   }
 }
 
-.buynow, .blackeffect:hover {
+.buynow, .blackeffect, .btnblue, .btnblack {
   white-space: nowrap;
   height: min-content;
 }
 
-.buynow:hover, .blackeffect:hover {
+.buynow:hover, .blackeffect:hover, .btnblue:hover {
   box-shadow: inset -170px 0 0 0 var(--hover), inset 170px 0 0 0 var(--hover);
 }
 
 $colors: (
   buynow: $white,
-  blackeffect: $black
+  blackeffect: $black,
+  btnblue: $white,
+  btnblack: $white
 );
 
 @each $button, $color in $colors {
@@ -642,6 +703,23 @@ $colors: (
   &:hover {
     border-color: var(--hover);
     color: $white;
+  }
+  &.btnblue {
+    border-color: $blue;
+    background: $blue;
+    &:hover {
+      color: $blue;
+      border: 2px solid $blue;
+    }
+  }
+
+  &.btnblack {
+    border-color: $black;
+    background: $black;
+    &:hover {
+      color: $black;
+      border: 2px solid $black;
+    }
   }
   &.blackeffect {
     &:hover {
@@ -998,6 +1076,10 @@ $colors: (
       height: 60px;
       font-size: 20px;
       padding-left: 20px;
+      @media (max-width: 640px) {
+        height: 40px;
+        font-size: 16px;
+      }
     }
     #telephone {
       padding-left: 60px;
@@ -1142,10 +1224,6 @@ $colors: (
   opacity: 1;
 }
 
-body.white {
-  background: $white;
-}
-
 // privacy
 
 .privacy {
@@ -1208,6 +1286,9 @@ body.white {
     text-transform: uppercase;
     margin-bottom: 70px;
     font-size: 2.3em;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 35px;
+    }
   }
   h2 {
     font-size: 1.1em;
@@ -1237,7 +1318,6 @@ body.white {
   max-width: 100%;
   flex-direction: column;
   z-index: 999;
-  background: $white;
   display: none;
   h1 {
     text-transform: uppercase;
@@ -1247,5 +1327,365 @@ body.white {
   h2 {
     font-size: 1.1em;
     max-width: 420px
+  }
+}
+
+
+.mb0 {
+  margin-bottom: 0em !important;
+}
+
+.mb1 {
+  margin-bottom: 1em !important;
+  @media (max-width: 420px) {
+    margin-bottom: 0.5em !important;
+  }
+}
+
+.mb2 {
+  margin-bottom: 2em !important;
+  @media (max-width: 420px) {
+    margin-bottom: 1em !important;
+  }
+}
+
+.mb3 {
+  margin-bottom: 3em !important;
+  @media (max-width: 420px) {
+    margin-bottom: 1.5em !important;
+  }
+}
+
+.mb4 {
+  margin-bottom: 4em !important;
+  @media (max-width: 420px) {
+    margin-bottom: 2em !important;
+  }
+}
+
+.mb5 {
+  margin-bottom: 5em !important;
+  @media (max-width: 420px) {
+    margin-bottom: 2.5em !important;
+  }
+}
+
+body {
+  a {
+    color: $black;
+    &:hover {
+      color: lighten($black,20%);
+    }
+  }
+  &.white {
+    background: $white url('../img/amstract.png') no-repeat left 100px top 0px;
+    color: $black;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @media (max-width: 640px) {
+      background: $white url('../img/amstract.png') no-repeat center top 40px;
+      background-size: 100%;
+    }
+    @include media-breakpoint-down(xs) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .lead {
+      font-weight: 400;
+    }
+    .bar {
+      background: $white;
+      border-color: $lightgray2;
+      &>a {
+        color: $lightgray0;
+        @media (max-width: 420px) {
+          margin-right: 13px;
+        }
+        &.active {
+          color: $black !important;
+        }
+      }
+    }
+    h1 {
+      @media (max-width: 640px) {
+        font-size: 30px;
+        line-height: 30px;
+        br {
+          display: none;
+        }
+      }
+    }
+    h1.hashtag {
+      @media (max-width: 1440px) {
+          margin-bottom: 60px;
+      }
+      @media (max-width: 768px) {
+          padding-left:0;
+      }
+      &+.block {
+        .w80 {
+          @media (max-width: 768px) {
+              margin-bottom: 60px;
+          }
+        }
+      }
+    }
+    .h1 {
+      background: none;
+      padding-top: 0;
+      font-size: 80px;
+      line-height: 80px;
+      text-transform: none;
+      @media (max-width: 1440px) {
+        font-size: 60px;
+        line-height: 60px;
+      }
+      @media (max-width: 640px) {
+        font-size: 40px;
+        line-height: 40px;
+        br {
+          display: none;
+        }
+      }
+      @media (max-width: 640px) {
+        padding-bottom: 10px;
+      }
+
+      &:after, &:before {
+        display: none;
+      }
+    }
+    .h3 {
+      margin-bottom: 40px;
+      @media (max-width: 640px) {
+        br {
+          display: none;
+        }
+      }
+    }
+    .h2 {
+      font-size: 60px;
+      margin-bottom: 60px;
+      line-height: 48px;
+      @media (max-width: 1440px) {
+        font-size: 45px;
+        line-height: 38px;
+        margin-bottom: 40px;
+      }
+      @media (max-width: 640px) {
+        br {
+          display: none;
+        }
+      }
+    }
+    .divider {
+      margin-bottom: 40px;
+      height: 1px;
+      &:before {
+        background: $black;
+      }
+      &:after {
+        background: $lightgray2;
+      }
+    }
+    .w80 {
+      width: 80%;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+    .w90 {
+      width: 90%;
+    }
+    .speakers {
+      @media (max-width: 768px) {
+        &>div {
+          text-align: left !important;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      display: block;
+      @media (max-width: 640px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      &.lead {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 35px;
+        @media (max-width: 640px) {
+          font-size: 18px;
+          line-height: 28px;
+          margin-bottom: 28px;
+        }
+      }
+    }
+    .block {
+      margin-bottom: 150px;
+      @media (max-width: 1440px) {
+        margin-bottom: 120px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 60px;
+      }
+      &.half {
+        margin-bottom: 75px;
+        @media (max-width: 768px) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+    iframe {
+      @media (max-width: 768px) {
+        height: 300px;
+      }
+    }
+    .counter {
+      .h2 {
+        margin-bottom: 20px;
+      }
+      p {
+        max-width: 240px;
+        @media (max-width: 768px) {
+          line-height: 24px;
+        }
+      }
+      &>div {
+        @media (max-width: 768px) {
+          width: 33% !important;
+        }
+        @media (max-width: 420px) {
+          .h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        @media (max-width: 360px) {
+          .h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .video {
+      @media (min-width: 1600px){
+        margin: 0 -100px;
+      }
+    }
+    .subscribe {
+      display: flex;
+      @media (max-width: 420px) {
+        display: block;
+      }
+      input {
+        height: 60px;
+        border: 1px solid $lightgray;
+        color: $black;
+        padding-left: 15px;
+        font-size: 18px;
+        width: 100%;
+        @media (max-width: 420px) {
+          height: 40px;
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        &:focus {
+          border: 1px solid $black2;
+        }
+      }
+      .btn {
+        font-family: $font2;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 160px;
+        font-size: 16px;
+        @media (max-width: 420px) {
+          height: 40px;
+          min-width: 120px;
+          font-size: 14px;
+          max-width: 100%;
+          margin:0 auto;
+        }
+      }
+    }
+    .program {
+      position: static;
+      opacity: 1;
+      background: none;
+      padding-top: 0;
+      overflow-y:visible;
+      &.see_speakers {
+        padding-top: 120px;
+        @media (max-width: 640px) {
+          padding-top: 60px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  p, a {
+    font-family: $font2;
+    font-size: 14px !important;
+    line-height: 22px;
+  }
+  a {
+    color: $black;
+  }
+  .col-6 {
+    @media (max-width: 420px) {
+      margin-bottom: 20px;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  .container {
+    &>.row {
+      &>div {
+        @media (max-width: 768px) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  .social {
+    display: flex;
+    margin-top: 20px;
+    li {
+      border: 0;
+    }
+      .so {
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+        margin-right: 20px;
+        &.fb {
+          background-image: url('../img/social_1.png');
+        }
+        &.yo {
+          background-image: url('../img/social_2.png');
+        }
+        &.tw {
+          background-image: url('../img/social_4.png');
+        }
+        &.ig {
+          background-image: url('../img/social_3.png');
+        }
+      }
   }
 }
