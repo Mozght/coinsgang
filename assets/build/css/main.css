@@ -8903,7 +8903,7 @@ body {
   line-height: 1.35em;
   background: #0f0f0f;
   padding: 0 0 6em; }
-  body p, body input {
+  body p, body input, body a {
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
   @media (max-width: 1280px) {
     body {
@@ -8918,6 +8918,14 @@ body {
 .h-center {
   align-items: center;
   display: flex; }
+
+.common {
+  font-size: 20px;
+  line-height: 34px;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+  .common small {
+    display: block;
+    font-size: 14px; }
 
 .login {
   display: flex;
@@ -8976,7 +8984,7 @@ body {
   content: '';
   width: 100%;
   height: 100vh;
-  max-height: 1200px;
+  max-height: 1000px;
   min-height: 871px;
   display: block;
   background: url("../img/korleone.jpg") no-repeat center bottom 0;
@@ -9043,6 +9051,8 @@ body {
     margin-bottom: 40px; }
     .godfather .h1.date {
       margin-bottom: 0; }
+      .godfather .h1.date p {
+        margin-top: 10px; }
     .godfather .h1 p {
       font-size: 36px; }
       @media (max-width: 640px) {
@@ -9050,7 +9060,9 @@ body {
           font-size: 22px;
           margin-top: 10px; } }
   .godfather p {
-    font-family: "Barlow Condensed", sans-serif !important; }
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important; }
+    .godfather p.join {
+      font-family: "Barlow Condensed", sans-serif !important; }
     .godfather p.down {
       font-size: 18px;
       line-height: 28px;
@@ -9075,7 +9087,7 @@ h1.hashtag {
   font-size: 2.3em;
   text-transform: uppercase;
   position: relative;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   background: #0f0f0f; }
   .h1.date {
     font-size: 2em; }
@@ -9158,7 +9170,7 @@ h1.hashtag {
       height: 40px; }
   .bar > a {
     margin-right: 30px;
-    font-size: 24px;
+    font-size: 18px;
     color: #666666;
     display: block;
     height: 40px;
@@ -9272,7 +9284,8 @@ ul li {
   display: flex;
   justify-content: space-between; }
   .total .price {
-    font-size: 0.8em;
+    font-size: 18px;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     align-self: flex-end;
     color: #ffffff;
     margin-right: 15px; }
@@ -9304,12 +9317,13 @@ ul li {
     color: #ffffff; }
 
 .see_accomodation {
-  margin-top: 2.8em;
+  margin-top: 1.5em;
   display: inline-block;
   background: url("../img/icon_accomodation.png") no-repeat center right;
   background-size: 27px;
   color: #666666;
-  padding-right: 40px; }
+  padding-right: 40px;
+  font-size: 18px; }
   @media (max-width: 1280px) {
     .see_accomodation {
       margin-top: 2.5em; } }
@@ -9407,7 +9421,7 @@ ul li {
           margin-bottom: 2rem; }
         .gallery_container #gallery .owl-stage-outer .owl-stage .owl-item p {
           margin-top: 2rem;
-          font-size: 0.8em; }
+          font-size: 18px; }
         .gallery_container #gallery .owl-stage-outer .owl-stage .owl-item.active {
           opacity: 1; }
           .gallery_container #gallery .owl-stage-outer .owl-stage .owl-item.active h3,
@@ -9443,10 +9457,6 @@ ul li {
   --color: #ffffff;
   --hover: white; }
 
-.btnblack {
-  --color: #ffffff;
-  --hover: white; }
-
 .btn {
   color: var(--color);
   transition: 0.25s;
@@ -9464,8 +9474,9 @@ ul li {
     border-color: #0f0f0f;
     background: #0f0f0f; }
     .btn.btnblack:hover {
-      color: #0f0f0f;
-      border: 2px solid #0f0f0f; }
+      color: #ffffff;
+      border: 2px solid #4472df;
+      background: #4472df; }
   .btn.blackeffect:hover {
     color: #ffffff; }
 
@@ -9536,7 +9547,9 @@ ul li {
   .program ul, .program li {
     padding: 0;
     margin: 0;
-    border: 0 !important; }
+    border: 0 !important;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 18px; }
   .program li {
     line-height: 1.1em;
     padding: 8px 0; }
@@ -9661,11 +9674,14 @@ ul li {
     margin-bottom: 12px; }
   .see_speakers .speaker p {
     width: 270px;
-    font-size: 0.7em;
+    font-size: 18px;
     line-height: 1.5em; }
     @media (max-width: 1259.98px) {
       .see_speakers .speaker p {
         width: 100%; } }
+    @media (max-width: 1023.98px) {
+      .see_speakers .speaker p {
+        font-size: 16px; } }
 
 .checkout {
   padding-top: 120px;
@@ -9688,11 +9704,12 @@ ul li {
     border: 1px solid #ffffff;
     padding: 0px 20px 0 52px;
     display: flex;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     place-items: center;
     justify-content: space-between;
     position: relative;
     cursor: pointer;
-    font-size: 24px; }
+    font-size: 18px; }
     @media (max-width: 959.98px) {
       .checkout .offer {
         margin-bottom: 40px; } }
@@ -9744,7 +9761,7 @@ ul li {
       border-radius: 0;
       border: 0;
       height: 60px;
-      font-size: 20px;
+      font-size: 18px;
       padding-left: 20px; }
       @media (max-width: 640px) {
         .checkout .form-group input {
@@ -9772,6 +9789,8 @@ ul li {
     .form_footer {
       display: block; } }
   .form_footer a {
+    font-size: 18px;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     color: #666666;
     text-decoration: underline; }
   .form_footer .donate {
@@ -9998,9 +10017,9 @@ body.white {
     body.white {
       background: #ffffff url("../img/amstract.png") no-repeat center top 40px;
       background-size: 100%; } }
-  @media (max-width: 959.98px) {
+  @media (max-width: 768px) {
     body.white {
-      padding-top: 60px;
+      padding-top: 120px;
       padding-bottom: 60px; } }
   body.white .lead {
     font-weight: 400; }
@@ -10013,7 +10032,7 @@ body.white {
         body.white .bar > a {
           margin-right: 13px;
           font-size: 16px; } }
-      @media (max-width: 375px) {
+      @media (max-width: 660px) {
         body.white .bar > a span {
           display: none; } }
       body.white .bar > a.active {
@@ -10030,7 +10049,7 @@ body.white {
   @media (max-width: 768px) {
     body.white h1.hashtag {
       padding-left: 0; } }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     body.white h1.hashtag + .block .w80 {
       margin-bottom: 60px; } }
   body.white .h1 {
@@ -10085,7 +10104,7 @@ body.white {
         width: 100%; } }
   body.white .w90 {
     width: 90%; }
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     body.white .speakers > div {
       text-align: left !important;
       margin-bottom: 20px; } }
@@ -10129,7 +10148,7 @@ body.white {
     @media (max-width: 768px) {
       body.white .counter p {
         line-height: 24px; } }
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     body.white .counter > div {
       width: 33% !important; } }
   @media (max-width: 420px) {
@@ -10143,9 +10162,20 @@ body.white {
     body.white .counter > div .h2 {
       font-size: 24px;
       margin-bottom: 10px; } }
-  @media (min-width: 1600px) {
-    body.white .video {
-      margin: 0 -100px; } }
+  body.white .video {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0; }
+    body.white .video iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute; }
+    @media (min-width: 1600px) {
+      body.white .video {
+        margin: 0 -100px; } }
   body.white .subscribe {
     display: flex; }
     @media (max-width: 420px) {
@@ -10202,11 +10232,19 @@ footer p, footer a {
 footer a {
   color: #0f0f0f; }
 
+footer .mail {
+  color: #4472df;
+  text-decoration: underline; }
+
 @media (max-width: 420px) {
   footer .col-6 {
     margin-bottom: 20px;
     flex: 100%;
     max-width: 100%; } }
+
+@media (max-width: 1023px) {
+  footer .lower_block {
+    margin-top: 15px; } }
 
 @media (max-width: 768px) {
   footer .container > .row > div {
@@ -10220,16 +10258,15 @@ footer .social {
   footer .social .so {
     width: 20px;
     height: 20px;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
     display: block;
     margin-right: 20px; }
+    footer .social .so:hover .cls-1 {
+      fill: #0f0f0f; }
     footer .social .so.fb {
-      background-image: url("../img/social_1.png"); }
+      /*background-image: url('../img/social_1.png');*/ }
     footer .social .so.yo {
-      background-image: url("../img/social_2.png"); }
+      /*background-image: url('../img/social_2.png');*/ }
     footer .social .so.tw {
-      background-image: url("../img/social_4.png"); }
+      /*background-image: url('../img/social_4.png');*/ }
     footer .social .so.ig {
-      background-image: url("../img/social_3.png"); }
+      /*background-image: url('../img/social_3.png');*/ }

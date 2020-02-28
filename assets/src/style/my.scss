@@ -10,7 +10,7 @@ body {
   line-height: 1.35em;
   background: $black;
   padding: 0 0 6em;
-  p, input {
+  p, input, a {
     font-family: $font2;
   }
   @media (max-width: 1280px) {
@@ -27,6 +27,16 @@ body {
 .h-center {
   align-items: center;
   display: flex;
+}
+
+.common {
+  font-size: 20px;
+  line-height: 34px;
+  font-family: $font2;
+  small {
+    display: block;
+    font-size: 14px;
+  }
 }
 
 .login {
@@ -96,7 +106,7 @@ body {
   content: '';
   width: 100%;
   height: 100vh;
-  max-height: 1200px;
+  max-height: 1000px;
   min-height: 871px;
   display: block;
   background: url("../img/korleone.jpg") no-repeat center bottom 0;
@@ -177,6 +187,9 @@ body {
     margin-bottom: 40px;
     &.date {
       margin-bottom: 0;
+      p{
+        margin-top: 10px;
+      }
     }
     p {
       font-size: 36px;
@@ -187,7 +200,10 @@ body {
     }
   }
   p {
-    font-family: $font1 !important;
+    font-family: $font2 !important;
+    &.join {
+      font-family: $font1 !important;
+    }
     &.down {
       font-size: 18px;
       line-height: 28px;
@@ -222,7 +238,7 @@ h1 {
   font-size: 2.3em;
   text-transform: uppercase;
   position: relative;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   background: $black;
 
   &.date {
@@ -323,7 +339,7 @@ h1 {
   }
   &>a {
     margin-right: 30px;
-    font-size: 24px;
+    font-size: 18px;
     color: $darkgray2;
     display: block;
     height:40px;
@@ -481,7 +497,8 @@ ul {
   margin-top: 1.5em;
   align-items: center;
   .price {
-    font-size: 0.8em;
+    font-size: 18px;
+    font-family: $font2;
     align-self: flex-end;
     color: $white;
     margin-right: 15px;
@@ -525,12 +542,13 @@ ul {
 }
 
 .see_accomodation {
-  margin-top: 2.8em;
+  margin-top: 1.5em;
   display: inline-block;
   background: url("../img/icon_accomodation.png") no-repeat center right;
   background-size: 27px;
   color: $darkgray2;
   padding-right: 40px;
+  font-size: 18px;
   @media (max-width: 1280px) {
     margin-top: 2.5em;
   }
@@ -651,7 +669,7 @@ ul {
           }
           p {
             margin-top: 2rem;
-            font-size: 0.8em;
+            font-size: 18px;
           }
           &.active {
             opacity: 1;
@@ -685,7 +703,6 @@ $colors: (
   buynow: $white,
   blackeffect: $black,
   btnblue: $white,
-  btnblack: $white
 );
 
 @each $button, $color in $colors {
@@ -717,8 +734,9 @@ $colors: (
     border-color: $black;
     background: $black;
     &:hover {
-      color: $black;
-      border: 2px solid $black;
+      color: $white;
+      border: 2px solid $blue;
+      background: $blue;
     }
   }
   &.blackeffect {
@@ -810,6 +828,8 @@ $colors: (
     padding:0;
     margin:0;
     border:0 !important;
+    font-family: $font2;
+    font-size: 18px;
   }
   li {
     line-height: 1.1em;
@@ -969,10 +989,13 @@ $colors: (
     }
     p {
       width: 270px;
-      font-size: 0.7em;
+      font-size: 18px;
       line-height: 1.5em;
       @include media-breakpoint-down(md) {
         width: 100%;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
       }
     }
   }
@@ -1009,11 +1032,12 @@ $colors: (
     border: 1px solid $white;
     padding: 0px 20px 0 52px;
     display: flex;
+    font-family: $font2;
     place-items: center;
     justify-content: space-between;
     position:relative;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 18px;
     @include media-breakpoint-down(xs) {
       margin-bottom: 40px;
     }
@@ -1074,7 +1098,7 @@ $colors: (
       border-radius: 0;
       border:0;
       height: 60px;
-      font-size: 20px;
+      font-size: 18px;
       padding-left: 20px;
       @media (max-width: 640px) {
         height: 40px;
@@ -1111,6 +1135,8 @@ $colors: (
     display: block;
   }
   a {
+    font-size: 18px;
+    font-family: $font2;
     color: $darkgray2;
     text-decoration: underline;
   }
@@ -1386,8 +1412,8 @@ body {
       background: $white url('../img/amstract.png') no-repeat center top 40px;
       background-size: 100%;
     }
-    @include media-breakpoint-down(xs) {
-      padding-top: 60px;
+    @media (max-width: 768px) {
+      padding-top: 120px;
       padding-bottom: 60px;
     }
     .lead {
@@ -1403,7 +1429,7 @@ body {
           font-size: 16px;
         }
         span {
-          @media (max-width: 375px) {
+          @media (max-width: 660px) {
             display: none;
           }
         }
@@ -1430,7 +1456,7 @@ body {
       }
       &+.block {
         .w80 {
-          @media (max-width: 768px) {
+          @media (max-width: 1024px) {
               margin-bottom: 60px;
           }
         }
@@ -1504,7 +1530,7 @@ body {
       width: 90%;
     }
     .speakers {
-      @media (max-width: 768px) {
+      @media (max-width: 960px) {
         &>div {
           text-align: left !important;
           margin-bottom: 20px;
@@ -1561,7 +1587,7 @@ body {
         }
       }
       &>div {
-        @media (max-width: 768px) {
+        @media (max-width: 960px) {
           width: 33% !important;
         }
         @media (max-width: 420px) {
@@ -1583,6 +1609,17 @@ body {
       }
     }
     .video {
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+      iframe {
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+      }
       @media (min-width: 1600px){
         margin: 0 -100px;
       }
@@ -1652,11 +1689,20 @@ footer {
   a {
     color: $black;
   }
+  .mail {
+    color: $blue;
+    text-decoration: underline;
+  }
   .col-6 {
     @media (max-width: 420px) {
       margin-bottom: 20px;
       flex: 100%;
       max-width: 100%;
+    }
+  }
+  .lower_block {
+    @media (max-width: 1023px) {
+      margin-top: 15px;
     }
   }
   .container {
@@ -1677,22 +1723,22 @@ footer {
       .so {
         width: 20px;
         height: 20px;
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
         display: block;
         margin-right: 20px;
+        &:hover .cls-1{
+          fill: $black;
+        }
         &.fb {
-          background-image: url('../img/social_1.png');
+          /*background-image: url('../img/social_1.png');*/
         }
         &.yo {
-          background-image: url('../img/social_2.png');
+          /*background-image: url('../img/social_2.png');*/
         }
         &.tw {
-          background-image: url('../img/social_4.png');
+          /*background-image: url('../img/social_4.png');*/
         }
         &.ig {
-          background-image: url('../img/social_3.png');
+          /*background-image: url('../img/social_3.png');*/
         }
       }
   }
