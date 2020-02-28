@@ -1400,6 +1400,12 @@ body {
         color: $lightgray0;
         @media (max-width: 420px) {
           margin-right: 13px;
+          font-size: 16px;
+        }
+        span {
+          @media (max-width: 375px) {
+            display: none;
+          }
         }
         &.active {
           color: $black !important;
@@ -1600,6 +1606,8 @@ body {
         }
         &:focus {
           border: 1px solid $black2;
+          outline: none !important;
+          box-shadow: none;
         }
       }
       .btn {
