@@ -9484,8 +9484,9 @@ ul li {
     border-color: var(--hover);
     color: #ffffff; }
   .btn.btnblue {
-    border-color: #4472df;
-    background: #4472df; }
+    border-color: #4472df !important;
+    background: #4472df;
+    color: #ffffff !important; }
     .btn.btnblue:hover {
       color: #4472df;
       border: 2px solid #4472df; }
@@ -9667,6 +9668,15 @@ ul li {
   @media (max-width: 1023.98px) {
     .see_speakers h2 {
       margin-bottom: 55px; } }
+
+.see_speakers .about_speakers {
+  margin-bottom: 80px;
+  color: #04073b; }
+  .see_speakers .about_speakers h2 {
+    font-size: 40px;
+    margin-bottom: 30px; }
+  .see_speakers .about_speakers p {
+    margin-bottom: 30px; }
 
 .see_speakers .speaker {
   margin-bottom: 70px; }

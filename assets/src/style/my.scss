@@ -744,8 +744,9 @@ $colors: (
     color: $white;
   }
   &.btnblue {
-    border-color: $blue;
+    border-color: $blue !important;
     background: $blue;
+    color: $white !important;
     &:hover {
       color: $blue;
       border: 2px solid $blue;
@@ -979,6 +980,17 @@ $colors: (
     margin-bottom: 110px;
     @include media-breakpoint-down(sm) {
       margin-bottom: 55px;
+    }
+  }
+  .about_speakers {
+    margin-bottom: 80px;
+    color: $darkblue;
+    h2 {
+      font-size: 40px;
+      margin-bottom:30px;
+    }
+    p{
+      margin-bottom: 30px;
     }
   }
   .speaker {
