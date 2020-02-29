@@ -748,7 +748,7 @@ $colors: (
     background: $blue;
     color: $white !important;
     &:hover {
-      color: $blue;
+      color: $blue !important;
       border: 2px solid $blue;
     }
   }

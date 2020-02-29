@@ -9488,7 +9488,7 @@ ul li {
     background: #4472df;
     color: #ffffff !important; }
     .btn.btnblue:hover {
-      color: #4472df;
+      color: #4472df !important;
       border: 2px solid #4472df; }
   .btn.btnblack {
     border-color: #0f0f0f;
