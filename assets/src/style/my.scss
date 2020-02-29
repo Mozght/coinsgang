@@ -200,7 +200,7 @@ body {
     }
   }
   p {
-    font-family: $font2 !important;
+    font-family: $font1 !important;
     &.join {
       font-family: $font1 !important;
     }
@@ -498,7 +498,7 @@ ul {
   align-items: center;
   .price {
     font-size: 18px;
-    font-family: $font2;
+    font-family: $font1;
     align-self: flex-end;
     color: $white;
     margin-right: 15px;
@@ -520,6 +520,7 @@ ul {
     border: 2px solid $white;
     color: $white;
     border-radius: 0;
+    font-family: $font1;
     text-transform: uppercase;
     font-size: 0.8em;
     padding: 0 1.5em;
@@ -1131,6 +1132,7 @@ $colors: (
   justify-content: space-between;
   line-height: 29px;
   margin-top: -55px;
+  font-family: $font2;
   @include media-breakpoint-down(xs) {
     display: block;
   }
@@ -1210,6 +1212,7 @@ $colors: (
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
     background: none;
 }
+
 
 
 
