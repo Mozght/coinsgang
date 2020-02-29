@@ -187,8 +187,12 @@ body {
     margin-bottom: 40px;
     &.date {
       margin-bottom: 0;
-      p{
-        margin-top: 10px;
+      .location {
+        margin-top: -5px;
+        margin-bottom: 20px;
+      }
+      .down {
+        margin-bottom: 10px;
       }
     }
     p {
@@ -205,9 +209,10 @@ body {
       font-family: $font1 !important;
     }
     &.down {
-      font-size: 18px;
+      font-size: 22px;
       line-height: 28px;
       display: block;
+      text-transform: none;
     }
   }
 }

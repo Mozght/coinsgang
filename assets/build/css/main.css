@@ -9051,8 +9051,11 @@ body {
     margin-bottom: 40px; }
     .godfather .h1.date {
       margin-bottom: 0; }
-      .godfather .h1.date p {
-        margin-top: 10px; }
+      .godfather .h1.date .location {
+        margin-top: -5px;
+        margin-bottom: 20px; }
+      .godfather .h1.date .down {
+        margin-bottom: 10px; }
     .godfather .h1 p {
       font-size: 36px; }
       @media (max-width: 640px) {
@@ -9064,9 +9067,10 @@ body {
     .godfather p.join {
       font-family: "Barlow Condensed", sans-serif !important; }
     .godfather p.down {
-      font-size: 18px;
+      font-size: 22px;
       line-height: 28px;
-      display: block; }
+      display: block;
+      text-transform: none; }
 
 p {
   margin-bottom: 0; }
