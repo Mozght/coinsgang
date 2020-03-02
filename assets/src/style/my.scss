@@ -1043,6 +1043,10 @@ $colors: (
   padding-top: 120px;
   max-width: 850px;
   margin: 0 auto;
+  .tips {
+    font-size: 16px;
+    line-height: 22px;
+  }
   a {
     &:hover {
       color: $white;
@@ -1144,6 +1148,7 @@ $colors: (
     }
   }
   .total {
+    margin-top: 60px;
     @media (max-width:500px) {
       display: block;
     }
@@ -1166,19 +1171,23 @@ $colors: (
   line-height: 29px;
   margin-top: -55px;
   font-family: $font2;
+
   @include media-breakpoint-down(xs) {
     display: block;
   }
+  .custom-control-label {
+    font-size: 14px !important;
+  }
   a {
-    font-size: 18px;
+    font-size: 14px;
     font-family: $font2;
     color: $darkgray2;
     text-decoration: underline;
   }
   .donate {
     color: $darkgray2;
-    font-size: 18px;
-    margin-left: 40px;
+    font-size: 14px;
+    line-height: 18px;
     @include media-breakpoint-down(xs) {
       margin-left: 0;
       margin-top: 20px;

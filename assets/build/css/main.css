@@ -9716,6 +9716,9 @@ ul li {
   padding-top: 120px;
   max-width: 850px;
   margin: 0 auto; }
+  .checkout .tips {
+    font-size: 16px;
+    line-height: 22px; }
   .checkout a:hover {
     color: #ffffff; }
   @media (max-width: 959.98px) {
@@ -9798,16 +9801,18 @@ ul li {
           font-size: 16px; } }
     .checkout .form-group #telephone {
       padding-left: 60px; }
-  @media (max-width: 500px) {
-    .checkout .total {
-      display: block; } }
-  .checkout .total .price {
-    font-size: 1.15em; }
-  @media (max-width: 500px) {
-    .checkout .total .buynow {
-      display: block;
-      width: 100%;
-      margin-top: 20px; } }
+  .checkout .total {
+    margin-top: 60px; }
+    @media (max-width: 500px) {
+      .checkout .total {
+        display: block; } }
+    .checkout .total .price {
+      font-size: 1.15em; }
+    @media (max-width: 500px) {
+      .checkout .total .buynow {
+        display: block;
+        width: 100%;
+        margin-top: 20px; } }
 
 .form_footer {
   display: flex;
@@ -9818,15 +9823,17 @@ ul li {
   @media (max-width: 959.98px) {
     .form_footer {
       display: block; } }
+  .form_footer .custom-control-label {
+    font-size: 14px !important; }
   .form_footer a {
-    font-size: 18px;
+    font-size: 14px;
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     color: #666666;
     text-decoration: underline; }
   .form_footer .donate {
     color: #666666;
-    font-size: 18px;
-    margin-left: 40px; }
+    font-size: 14px;
+    line-height: 18px; }
     @media (max-width: 959.98px) {
       .form_footer .donate {
         margin-left: 0;
