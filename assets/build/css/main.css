@@ -9247,7 +9247,7 @@ h1.hashtag {
       .bar .hashtag {
         line-height: 35px; }
       .bar .coinsbank {
-        margin-left: 10px; }
+        margin-left: 0; }
         .bar .coinsbank img {
           width: 20px;
           height: 20px; } }
@@ -10067,8 +10067,9 @@ body.white {
       color: #999999; }
       @media (max-width: 420px) {
         body.white .bar > a {
-          margin-right: 13px;
-          font-size: 16px; } }
+          margin-right: 7px;
+          font-size: 12px;
+          line-height: 38px; } }
       @media (max-width: 660px) {
         body.white .bar > a span {
           display: none; } }

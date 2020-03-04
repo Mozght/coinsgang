@@ -439,7 +439,7 @@ h1 {
       line-height:35px;
     }
     .coinsbank {
-      margin-left: 10px;
+      margin-left: 0;
       img {
         width: 20px;
         height: 20px;
@@ -1470,8 +1470,9 @@ body {
       &>a {
         color: $lightgray0;
         @media (max-width: 420px) {
-          margin-right: 13px;
-          font-size: 16px;
+          margin-right: 7px;
+          font-size: 12px;
+          line-height: 38px;
         }
         span {
           @media (max-width: 660px) {
