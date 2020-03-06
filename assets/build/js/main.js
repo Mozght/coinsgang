@@ -19854,11 +19854,20 @@ $(document).ready(function(){
     $('#total_value').text(price);
   })
 
-  window.intlTelInput(document.querySelector("#telephone"));
+  //window.intlTelInput(document.querySelector("#telephone"));
 
   $('#become_sponsor').on('click',function(e){
     e.preventDefault();
     $('.thanks').prev('.sponsor').css('opacity',0);
     $('.thanks').css('display','flex');
   });
+
+  $('#accordion .accordionButton').click(function() {
+    $('#accordion .content').removeClass('active');
+    $(this).parent().addClass('active');
+    var content = $(this).closest('.content').find('.accordionContent');
+    $('#accordion .accordionContent').not(content).slideUp();
+    content.slideDown();
+  });
+
 });

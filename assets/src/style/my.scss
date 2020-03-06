@@ -1789,3 +1789,171 @@ footer {
       }
   }
 }
+
+#accordion {
+  .content {
+    border: 1px solid $lightgray;
+    border-radius: 10px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    @media (max-width: 360px) {
+      padding: 0 15px;
+    }
+    .accordionButton {
+      position: relative;
+      width: 100%;
+      background: none;
+      text-align: left;
+      font-size: 24px;
+      border: 0;
+      box-shadow: none;
+      height: 58px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: url('../img/arrow_down.png') no-repeat right  center;
+      background-size: 12px 7px;
+      @media (max-width: 420px) {
+        font-size: 18px;
+      }
+      @media (max-width: 360px) {
+        font-size: 16px;
+      }
+      .price {
+        position: absolute;
+        right: 33px;
+        font-family: $font2;
+        font-size: 14px;
+        color: $blue;
+        font-weight: bold;
+        background: url('../img/icon_btc.png') no-repeat right center;
+        background-size: 17px 17px;
+        padding-right: 24px;
+        @media (max-width: 360px) {
+          font-size: 12px;
+          right: 25px;
+        }
+        &.soldout {
+          color: $lightgray0;
+          background-image: url('../img/icon_btc_gray.png');
+          span {
+            font-weight: normal;
+            margin-right: 10px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+    }
+    &.active {
+      .accordionButton {
+        background: url('../img/arrow_up.png') no-repeat right  center;
+        background-size: 12px 7px;
+      }
+    }
+    .accordionContent {
+      display: none;
+      padding-bottom: 30px;
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        @media (max-width: 420px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+      ul {
+        li {
+          border: 0;
+          font-size: 16px;
+          font-family: $font2;
+          position: relative;
+          padding: 0;
+          padding-left: 20px;
+          &:before {
+            content:'';
+            width: 6px;
+            height: 6px;
+            background: $blue;
+            display: block;
+            position: absolute;
+            border-radius: 20px;
+            top: 15px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Sponsorship
+
+.sponsorship {
+  .block {
+    margin-bottom: 90px !important;
+    @media (max-width: 420px) {
+      margin-bottom: 60px !important;
+    }
+  }
+  h1 {
+    font-size: 52px;
+  }
+  h2 {
+    margin-bottom: 40px;
+  }
+  p {
+    &.lead {
+      font-size: 24px;
+      margin-bottom: 40px !important;
+    }
+  }
+  .divider {
+    margin-bottom: 30px !important;
+    margin-top: 10px;
+  }
+  .counter {
+    &>div {
+      margin-bottom: 30px;
+    }
+  }
+  .packages {
+    .col-6 {
+      @media (max-width: 420px) {
+        width: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    .package {
+      position: relative;
+      border-radius: 10px;
+      min-height: 100px;
+      border: 1px solid $lightgray;
+      padding: 20px;
+      margin-bottom: 20px;
+      .package__header {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: $font2;
+      }
+      .package__price {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        font-family: $font2;
+        font-size: 14px;
+        color: $blue;
+        font-weight: bold;
+        background: url('../img/icon_btc.png') no-repeat right center;
+        background-size: 17px 17px;
+        padding-right: 24px;
+        &.nobadge {
+          background: none;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
