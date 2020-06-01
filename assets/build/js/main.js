@@ -19776,6 +19776,13 @@ $(document).ready(function(){
       items:1,
       dots: false
   });
+
+  $('.partners_carousel').owlCarousel({
+      loop:true,
+      margin:0,
+      items:3,
+      dots:true
+  });
   $('.gallery_container').hide();
   $('.gallery_container').css('opacity','1');
   $('.see_accomodation').on('click',function(e){

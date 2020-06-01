@@ -10265,7 +10265,7 @@ body.white {
 footer p, footer a {
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 14px !important;
-  line-height: 22px; }
+  line-height: 24px !important; }
 
 footer a {
   color: #0f0f0f; }
@@ -10308,6 +10308,10 @@ footer .social {
       /*background-image: url('../img/social_4.png');*/ }
     footer .social .so.ig {
       /*background-image: url('../img/social_3.png');*/ }
+
+footer .coinsbank_logo {
+  float: left;
+  margin-right: 20px; }
 
 #accordion .content {
   border: 1px solid #cccccc;
@@ -10444,3 +10448,27 @@ footer .social {
     .sponsorship .packages .package .package__price.nobadge {
       background: none;
       padding-right: 0; }
+
+.partners_block h2 {
+  font-size: 40px; }
+
+.partners_block .owl-item {
+  padding: 0px 75px;
+  border: 1px solid #e6e6e6;
+  max-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px; }
+  .partners_block .owl-item img {
+    height: auto; }
+
+.partners_block .owl-theme .owl-dots {
+  text-align: left;
+  transform: translateX(-7px); }
+  .partners_block .owl-theme .owl-dots .owl-dot.active span, .partners_block .owl-theme .owl-dots .owl-theme .owl-dots .owl-dot:hover span {
+    background: #0f0f0f; }
+  .partners_block .owl-theme .owl-dots .owl-dot span {
+    background: #e6e6e6;
+    width: 8px;
+    height: 8px; }

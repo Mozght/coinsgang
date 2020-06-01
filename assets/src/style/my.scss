@@ -1730,7 +1730,7 @@ footer {
   p, a {
     font-family: $font2;
     font-size: 14px !important;
-    line-height: 22px;
+    line-height: 24px !important;
   }
   a {
     color: $black;
@@ -1787,6 +1787,10 @@ footer {
           /*background-image: url('../img/social_3.png');*/
         }
       }
+  }
+  .coinsbank_logo {
+    float: left;
+    margin-right: 20px;
   }
 }
 
@@ -1954,6 +1958,36 @@ footer {
           padding-right: 0;
         }
       }
+    }
+  }
+}
+
+.partners_block {
+  h2 {
+    font-size: 40px;
+  }
+  .owl-item {
+    padding: 0px 75px;
+    border: 1px solid $lightgray2;
+    max-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    img {
+      height: auto;
+    }
+  }
+  .owl-theme .owl-dots {
+    text-align: left;
+    transform: translateX(-7px);
+    .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+      background: $black;
+    }
+    .owl-dot span {
+      background: $lightgray2;
+      width: 8px;
+      height: 8px;
     }
   }
 }
