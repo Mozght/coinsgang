@@ -1791,6 +1791,9 @@ footer {
   .coinsbank_logo {
     float: left;
     margin-right: 20px;
+    @media (max-width: 420px) {
+      margin-top: 5px;
+    }
   }
 }
 
@@ -1963,12 +1966,16 @@ footer {
 }
 
 .partners_block {
+  .owl-stage-outer {
+    border-right: 1px solid $lightgray2;
+  }
   h2 {
     font-size: 40px;
   }
   .owl-item {
     padding: 0px 75px;
     border: 1px solid $lightgray2;
+    border-right: none;
     max-height: 140px;
     display: flex;
     align-items: center;

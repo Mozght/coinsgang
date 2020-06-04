@@ -8,10 +8,24 @@ $(document).ready(function(){
   });
 
   $('.partners_carousel').owlCarousel({
-      loop:true,
-      margin:0,
-      items:3,
-      dots:true
+    loop:true,
+    margin:0,
+    items:3,
+    dots:true,
+    responsive:{
+      0 : {
+        loop:true,
+        margin:0,
+        items:1,
+        dots:true
+      }, 
+      769 : {
+        loop:true,
+        margin:0,
+        items:3,
+        dots:true
+      }
+    }
   });
   $('.gallery_container').hide();
   $('.gallery_container').css('opacity','1');
