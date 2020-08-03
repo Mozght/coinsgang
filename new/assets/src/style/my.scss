@@ -1255,6 +1255,18 @@ footer {
     font-size: 15px;
     line-height: 20px;
     height: 40px;
+    color: $black;
+  }
+}
+
+.form-group input.error{
+  border-color: red;
+  &+span.error {
+    display: block;
+    margin-top: 5px;
+    color: $red;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 

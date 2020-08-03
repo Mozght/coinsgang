@@ -20586,4 +20586,21 @@ $(document).ready(function(){
     });
   }
 
+  $( ".ajax_form input" ).keyup(function() {
+        var fail = false;
+        $( '.ajax_form' ).find( 'select, textarea, input' ).each(function(){
+            if( ! $( this ).prop( 'required' )){
+
+            } else {
+                if ( ! $( this ).val() ) {
+                    fail = true;
+                }
+            }
+        });
+
+        if ( ! fail ) {
+          $('.ajax_form').find('.btn.disabled').removeClass('disabled').removeAttr('disabled');
+        }
+  });
+
 });

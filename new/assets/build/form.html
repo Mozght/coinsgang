@@ -25,81 +25,84 @@
     <div class="row">
       <div class="col-sm-8 offset-sm-2">
         <h1>Submit to speak</h1>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="inp1">Full name</label>
-              <input type="text" class="form-control" id="inp1" aria-describedby="inp1" placeholder="Tatyana Chernovets">
-            </div>
-            <div class="form-group">
-              <label for="inp2">Phone number</label>
-              <input type="text" class="form-control" id="inp2" aria-describedby="inp2" placeholder="+375 (29) 368-20-60 ">
-            </div>
-            <div class="form-group">
-              <label for="inp3">Email</label>
-              <input type="text" class="form-control" id="inp3" aria-describedby="inp3" placeholder="dsgn@gmail.com">
-            </div>
-            <div class="form-group">
-              <label for="inp4">Social profile link</label>
-              <input type="text" class="form-control" id="inp4" aria-describedby="inp4" placeholder="facebook.com/ tatyana.chernovets">
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="inp5">Company name</label>
-              <input type="text" class="form-control" id="inp5" aria-describedby="inp5" placeholder="CoinsBank">
-            </div>
-            <div class="form-group">
-              <label for="inp6">Company type</label>
-              <select>
-                <option>
-                    Investor/ Fund
-                </option>
-                <option>
-                    Exchange
-                </option>
-                <option>
-                    Startup
-                </option>
-                <option>
-                    Journalist / Media representative
-                </option>
-                <option>
-                    Blogger / Influencer
-                </option>
-                <option>
-                    Attorney / Lawyer
-                </option>
-                <option>
-                    Government authority
-                </option>
-                <option>
-                    Other
-                </option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="inp7">Company website</label>
-              <input type="text" class="form-control" id="inp7" aria-describedby="inp7" placeholder="Coinsgang.com">
-            </div>
-            <div class="form-group">
-              <label for="inp8">Position</label>
-              <input type="text" class="form-control" id="inp8" aria-describedby="inp8" placeholder="Product Manager">
-            </div>
-          </div>
-        </div>
-        <div class="row cg-form-controls">
+        <form class="ajax_form">
+          <div class="row cg-form">
             <div class="col-sm-6">
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">I agree to <a href="#">Privacy Policy</a> and <a href="#">Public offer</a></label>
+              <div class="form-group">
+                <label for="inp1">Full name</label>
+                <input type="text" class="form-control error" id="inp1" aria-describedby="inp1" placeholder="Put your full name here" required="required">
+                <span class="error_name error"> <span class="error">This field is required.</span></span>
+              </div>
+              <div class="form-group">
+                <label for="inp2">Phone number</label>
+                <input type="text" class="form-control" id="inp2" aria-describedby="inp2" placeholder="Phone number with country and area codes" required="required">
+              </div>
+              <div class="form-group">
+                <label for="inp3">Email</label>
+                <input type="text" class="form-control" id="inp3" aria-describedby="inp3" placeholder="Your working email" required="required">
+              </div>
+              <div class="form-group">
+                <label for="inp4">Social profile link</label>
+                <input type="text" class="form-control" id="inp4" aria-describedby="inp4" placeholder="Facebook, Linkedin, Insagram accounts">
               </div>
             </div>
-            <div class="col-sm-6 ">
-              <a href="#" class="btn btn-primary">Send request</a>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="inp5">Company name</label>
+                <input type="text" class="form-control" id="inp5" aria-describedby="inp5" placeholder="CoinsBank">
+              </div>
+              <div class="form-group">
+                <label for="inp6">Company type</label>
+                <select required>
+                  <option>
+                      Investor/ Fund
+                  </option>
+                  <option>
+                      Exchange
+                  </option>
+                  <option>
+                      Startup
+                  </option>
+                  <option>
+                      Journalist / Media representative
+                  </option>
+                  <option>
+                      Blogger / Influencer
+                  </option>
+                  <option>
+                      Attorney / Lawyer
+                  </option>
+                  <option>
+                      Government authority
+                  </option>
+                  <option>
+                      Other
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inp7">Company website</label>
+                <input type="text" class="form-control" id="inp7" aria-describedby="inp7" placeholder="Coinsgang.com">
+              </div>
+              <div class="form-group">
+                <label for="inp8">Position</label>
+                <input type="text" class="form-control" id="inp8" aria-describedby="inp8" placeholder="Product Manager">
+              </div>
             </div>
+          </div>
+          <div class="row cg-form-controls">
+              <div class="col-sm-6">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">I agree to <a href="#">Privacy Policy</a> and <a href="#">Public offer</a></label>
+                </div>
+              </div>
+              <div class="col-sm-6 ">
+                <a href="#" class="btn btn-primary disabled" disabled>Send request</a>
+              </div>
 
-        </div>
+          </div>
+        </form>
         <h5> buttons </h5>
         <div class="row cg-form-controls">
           <div class="col-sm-12 ">
