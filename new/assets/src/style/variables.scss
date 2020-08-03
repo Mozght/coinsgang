@@ -1,0 +1,41 @@
+$black : #000000;
+$black2 : #1f1f1f;
+$white : #ffffff;
+$darkgray: #333333;
+$darkgray2: #666666;
+$lightgray0: #808080;
+$lightgray: #cccccc;
+$lightgray2: #E5E5E5;
+$lightgray3: #D4D4D4;
+$purple: #781e48;
+$blue: #4845ED;
+$blue-hover: #3230A6;
+$borderdark: #323232;
+$font1: 'dm_sansregular', sans-serif;
+$font2: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$grid-gutter-width: 40px !default;
+$grid-breakpoints: (
+        xxs: 0,
+        xs: 521px,
+        sm: 865px,
+        md: 1025px,
+        lg: 1281px,
+        xl: 1441px,
+        xxl: 1601px
+);
+$container-max-widths: (
+        xs: 560px,
+        sm: 864px,
+        md: 1024px,
+        lg: 1040px,
+        xl: 1200px,
+        xxl: 1280px
+);
+
+@font-face {
+    font-family: 'dm_sansregular';
+    src: url('../fonts/dmsans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/dmsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
