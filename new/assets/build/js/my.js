@@ -133,7 +133,7 @@ $(document).ready(function(){
           $('.ajax_form').find('.btn.disabled').removeClass('disabled').removeAttr('disabled');
         }
   });
-
+  /*
   $(".ajax_form .btn-primary").click(function(e){
     e.preventDefault();
     fail = false;
@@ -144,6 +144,9 @@ $(document).ready(function(){
     }
   });
 
+  */
+
+  
   $('.cg-close-thanks').on('click',function(e){
     e.preventDefault();
     $('#thankyouModal').modal('hide');

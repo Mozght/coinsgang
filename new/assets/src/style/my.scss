@@ -1814,6 +1814,10 @@ footer {
   }
   ul {
     li {
+      padding-left: 0;
+      &:after {
+        display: none;
+      }
       a {
         font-weight: bold;
         font-size: 18px;

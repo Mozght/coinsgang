@@ -9914,11 +9914,15 @@ footer {
     line-height: 24px; }
     .cg-thanks-wrapper p:nth-last-child(2) {
       margin-bottom: 80px; }
-  .cg-thanks-wrapper ul li a {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
-    text-decoration: underline; }
+  .cg-thanks-wrapper ul li {
+    padding-left: 0; }
+    .cg-thanks-wrapper ul li:after {
+      display: none; }
+    .cg-thanks-wrapper ul li a {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 23px;
+      text-decoration: underline; }
 
 .cg-required-text {
   font-weight: normal;
