@@ -8610,13 +8610,13 @@ input {
 
 .btn {
   height: 56px;
-  padding: 0 20px;
+  padding: 0 25px;
   border-radius: 5px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 180px;
-  max-width: 180px;
+  max-width: 250px;
   border: 0;
   font-size: 18px; }
   .btn.btn-blue {
@@ -9952,7 +9952,3 @@ footer {
   .navbar-expand-sm .navbar-collapse {
     display: flex !important;
     flex-basis: auto; } }
-
-@media (max-width: 866px) {
-  .navbar-expand-sm .navbar-collapse {
-    display: none !important; } }
