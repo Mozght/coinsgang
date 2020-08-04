@@ -11,7 +11,7 @@ var path = {
     },
     src: {
         html: 'assets/src/*.html',
-        js: 'assets/src/js/main.js',
+        js: 'assets/src/js/*.js',
         style: 'assets/src/style/main.scss',
         img: 'assets/src/img/**/*.*',
         fonts: 'assets/src/fonts/**/*.*'
@@ -46,7 +46,7 @@ var gulp = require('gulp'),  // подключаем Gulp
     uglify = require('gulp-uglify'), // модуль для минимизации JavaScript
     cache = require('gulp-cache'), // модуль для кэширования
     imagemin = require('gulp-imagemin'), // плагин для сжатия PNG, JPEG, GIF и SVG изображений
-    jpegrecompress = require('imagemin-jpeg-recompress'), // плагин для сжатия jpeg	
+    jpegrecompress = require('imagemin-jpeg-recompress'), // плагин для сжатия jpeg
     pngquant = require('imagemin-pngquant'), // плагин для сжатия png
     rimraf = require('gulp-rimraf'), // плагин для удаления файлов и каталогов
     rename = require('gulp-rename');
@@ -118,7 +118,7 @@ gulp.task('image:build', function () {
         .pipe(gulp.dest(path.build.img)); // выгрузка готовых файлов
 });
 
-// удаление каталога build 
+// удаление каталога build
 gulp.task('clean:build', function () {
     return gulp.src(path.clean, { read: false })
         .pipe(rimraf());
@@ -154,5 +154,5 @@ gulp.task('watch', function () {
 // задача по умолчанию
 gulp.task('default', gulp.series(
     'build',
-    gulp.parallel('webserver','watch')      
+    gulp.parallel('webserver','watch')
 ));

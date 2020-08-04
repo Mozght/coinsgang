@@ -6,6 +6,29 @@
 </head>
 
 <body class="cg-invert">
+  <div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog" aria-labelledby="thankyouModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="thanks">
+                  <div class="cg-thanks-wrapper">
+                    <h1>Thank you for your request!</h1>
+                    <p>One of us will get back in touch with you soon!</p>
+                    <ul>
+                      <li><a href="#">Back to main page</a></li>
+                    </ul>
+                  </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="cg-close-thanks">
+          <button type="button"  data-dismiss="modal" aria-label="Close">
+            Close
+          </button>
+        </div>
+    </div>
+  </div>
     <div class="container-sm">
       <nav class="navbar navbar-expand-sm show" id="navigation">
         <a class="navbar-brand" href="#"><img src="img/logo_invert.svg" alt="" /></a>
@@ -25,30 +48,30 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label for="inp1">Full name</label>
-                <input type="text" class="form-control error" id="inp1" aria-describedby="inp1" placeholder="Put your full name here" required="required">
+                <input type="text" class="form-control error" id="inp1" aria-describedby="inp1" placeholder="" required="required">
                 <span class="error_name error"> <span class="error">This field is required.</span></span>
               </div>
               <div class="form-group">
                 <label for="inp2">Phone number</label>
-                <input type="text" class="form-control" id="inp2" aria-describedby="inp2" placeholder="Phone number with country and area codes" required="required">
+                <input type="text" class="form-control" id="inp2" aria-describedby="inp2" placeholder="" required="required">
               </div>
               <div class="form-group">
                 <label for="inp3">Email</label>
-                <input type="text" class="form-control" id="inp3" aria-describedby="inp3" placeholder="Your working email" required="required">
+                <input type="text" class="form-control" id="inp3" aria-describedby="inp3" placeholder="" required="required">
               </div>
               <div class="form-group">
                 <label for="inp4">Social profile link</label>
-                <input type="text" class="form-control" id="inp4" aria-describedby="inp4" placeholder="Facebook, Linkedin, Insagram accounts">
+                <input type="text" class="form-control" id="inp4" aria-describedby="inp4" placeholder="">
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
                 <label for="inp5">Company name</label>
-                <input type="text" class="form-control" id="inp5" aria-describedby="inp5" placeholder="CoinsBank">
+                <input type="text" class="form-control" id="inp5" aria-describedby="inp5" placeholder="">
               </div>
               <div class="form-group">
                 <label for="inp6">Company type</label>
-                <select required>
+                <select>
                   <option>
                       Investor/ Fund
                   </option>
@@ -77,11 +100,11 @@
               </div>
               <div class="form-group">
                 <label for="inp7">Company website</label>
-                <input type="text" class="form-control" id="inp7" aria-describedby="inp7" placeholder="Coinsgang.com">
+                <input type="text" class="form-control" id="inp7" aria-describedby="inp7" placeholder="">
               </div>
               <div class="form-group">
                 <label for="inp8">Position</label>
-                <input type="text" class="form-control" id="inp8" aria-describedby="inp8" placeholder="Product Manager">
+                <input type="text" class="form-control" id="inp8" aria-describedby="inp8" placeholder="">
               </div>
             </div>
           </div>
@@ -92,7 +115,10 @@
                   <label class="custom-control-label" for="customCheck1">I agree to <a href="#">Privacy Policy</a> and <a href="#">Public offer</a></label>
                 </div>
               </div>
-              <div class="col-sm-6 ">
+              <div class="col-sm-3 cg-required-text" >
+                All fields are required
+              </div>
+              <div class="col-sm-3">
                 <a href="#" class="btn btn-primary disabled" disabled>Send request</a>
               </div>
 

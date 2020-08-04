@@ -23,4 +23,3 @@
 //= ../../../node_modules/selectboxit/src/javascripts/jquery.selectBoxIt.min.js
 //= ../../../node_modules/ismobilejs/dist/isMobile.min.js
 // Импортируем другие js-файлы
-//= my.js
