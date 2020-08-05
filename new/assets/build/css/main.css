@@ -9358,7 +9358,8 @@ footer {
 .cg-accordion .card {
   background: none;
   border: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  overflow: hidden; }
 
 .cg-accordion .card-body {
   padding: 0; }
@@ -9412,6 +9413,10 @@ footer {
     align-content: flex-start;
     justify-content: space-between;
     border-bottom: 1px solid #191919; }
+    @media (max-width: 521px) {
+      .cg-schedule-table .cg-schedule-table-tr {
+        flex-direction: column;
+        padding: 10px 0; } }
     .cg-schedule-table .cg-schedule-table-tr.cg-schedule-table-tr-head {
       border-bottom: 0; }
     .cg-schedule-table .cg-schedule-table-tr.cg-schedule-table-tr-noborder {
@@ -9423,11 +9428,22 @@ footer {
       font-weight: 700; }
     .cg-schedule-table .cg-schedule-table-tr .cg-schedule-event-head-time {
       width: 20%;
-      padding: 25px 20px 0; }
+      padding: 25px 20px 0 0; }
+      @media (max-width: 700px) {
+        .cg-schedule-table .cg-schedule-table-tr .cg-schedule-event-head-time {
+          width: 30%; } }
+      @media (max-width: 521px) {
+        .cg-schedule-table .cg-schedule-table-tr .cg-schedule-event-head-time {
+          padding-left: 0;
+          width: 521px; } }
     .cg-schedule-table .cg-schedule-table-tr .cg-schedule-event-head {
       width: 80%;
       padding: 25px 20px 10px;
       font-size: 20px; }
+      @media (max-width: 521px) {
+        .cg-schedule-table .cg-schedule-table-tr .cg-schedule-event-head {
+          padding-left: 0;
+          padding-top: 0; } }
     .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td {
       padding: 0 20px;
       vertical-align: middle;
@@ -9435,10 +9451,19 @@ footer {
       min-height: 75px;
       display: flex;
       align-items: center; }
+      @media (max-width: 521px) {
+        .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td {
+          min-height: 0; } }
       .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td.cg-schedule-event-time {
         padding-left: 0; }
       .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td:nth-child(1) {
         width: 20%; }
+        @media (max-width: 700px) {
+          .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td:nth-child(1) {
+            width: 30%; } }
+        @media (max-width: 521px) {
+          .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td:nth-child(1) {
+            width: 100%; } }
       .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td:nth-child(2) {
         padding: 10px 20px;
         width: 35%; }
@@ -9447,7 +9472,7 @@ footer {
             width: 70%; } }
         @media (max-width: 521px) {
           .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td:nth-child(2) {
-            padding: 0 10px; } }
+            padding: 0; } }
       .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td:nth-child(3) {
         padding: 20px;
         width: 35%; }
@@ -9463,6 +9488,11 @@ footer {
       .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td:last-child {
         text-align: right;
         align-self: flex-end; }
+        @media (max-width: 521px) {
+          .cg-schedule-table .cg-schedule-table-tr .cg-schedule-table-td:last-child {
+            position: absolute;
+            right: 0;
+            bottom: 0; } }
 
 .btn-collapse-controller {
   width: 24px;
@@ -9484,7 +9514,7 @@ footer {
   font-weight: 700; }
   @media (max-width: 521px) {
     .cg-schedule-event-title {
-      font-size: 16px; } }
+      margin: 10px 0; } }
   .cg-schedule-event-title .cg-top-speaker-name {
     margin-top: 20px; }
 
@@ -9787,6 +9817,10 @@ footer {
   line-height: 32px; }
   .cg-packages.cg-accordion .card-body li:after {
     display: none; }
+
+@media (max-width: 520px) {
+  .cg-schedule-table-sb .cg-schedule-table-tr {
+    flex-direction: column; } }
 
 .cg-schedule-table-sb .cg-schedule-table-tr .cg-schedule-table-td {
   width: auto !important;

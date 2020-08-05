@@ -91,30 +91,32 @@ $(document).ready(function(){
     $( 'body' ).toggleClass( 'scrollDisable' );
   });
 
-  if (!isMobile.any || !$('body').hasClass('cg-invert')) { //detect not mobile and do some menu animation
-    $(window).scroll(function(){
-      if ($(window).scrollTop() > h && !$('body').hasClass('cg-invert')) {
-        $('#navigation').removeClass('show');
-        setTimeout(function(){
-          $('#navigation').addClass('fixed-top');
-          $('header').css('padding-top',h);
-        },200);
-      } else {
-        setTimeout(function(){
-          if ($('.fixed-top').length > 0) {
-            $('#navigation').addClass('fixed-top-remove');
-            setTimeout(function(){
-              $('#navigation').removeClass('fixed-top-remove');
-              $('#navigation').removeClass('fixed-top');
-              $('header').css('padding-top',0);
-            },200);
-            setTimeout(function(){
-              $('#navigation').addClass('show');
-            },200);
-          }
-        },200);
-      }
-    });
+  if ($('body').hasClass('cg-invert')) { //detect not mobile and do some menu animation
+    if(!isMobile.any) {
+      $(window).scroll(function(){
+        if ($(window).scrollTop() > h && !$('body').hasClass('cg-invert')) {
+          $('#navigation').removeClass('show');
+          setTimeout(function(){
+            $('#navigation').addClass('fixed-top');
+            $('header').css('padding-top',h);
+          },200);
+        } else {
+          setTimeout(function(){
+            if ($('.fixed-top').length > 0) {
+              $('#navigation').addClass('fixed-top-remove');
+              setTimeout(function(){
+                $('#navigation').removeClass('fixed-top-remove');
+                $('#navigation').removeClass('fixed-top');
+                $('header').css('padding-top',0);
+              },200);
+              setTimeout(function(){
+                $('#navigation').addClass('show');
+              },200);
+            }
+          },200);
+        }
+      });
+    }
   }
 
   $( ".ajax_form input" ).keyup(function() {

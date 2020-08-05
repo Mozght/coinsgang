@@ -1044,6 +1044,7 @@ footer {
     background: none;
     border: 0;
     border-radius: 0;
+    overflow: hidden;
   }
   .card-body {
     padding: 0;
@@ -1112,8 +1113,13 @@ footer {
     align-content: flex-start;
     justify-content: space-between;
     border-bottom: 1px solid $black3;
+    @media (max-width: 521px) {
+      flex-direction: column;
+      padding: 10px 0;
+    }
     &.cg-schedule-table-tr-head {
       border-bottom: 0;
+
     }
     &.cg-schedule-table-tr-noborder {
       border-bottom: 0;
@@ -1121,19 +1127,31 @@ footer {
     }
     .cg-schedule-event-head,
     .cg-schedule-event-head-time {
+
       color: $blue;
       font-weight: 700;
     }
 
     .cg-schedule-event-head-time {
       width: 20%;
-      padding: 25px 20px 0 ;
+      padding: 25px 20px 0 0;
+      @media (max-width: 700px) {
+        width: 30%;
+      }
+      @media (max-width: 521px) {
+        padding-left:0;
+        width: 521px;
+      }
     }
 
     .cg-schedule-event-head {
       width: 80%;
       padding: 25px 20px 10px;
       font-size: 20px;
+      @media (max-width: 521px) {
+        padding-left: 0;
+        padding-top: 0;
+      }
     }
 
     .cg-schedule-table-td {
@@ -1143,11 +1161,20 @@ footer {
       min-height: 75px;
       display: flex;
       align-items: center;
+      @media (max-width: 521px) {
+        min-height: 0;
+      }
       &.cg-schedule-event-time {
         padding-left: 0;
       }
       &:nth-child(1) {
         width: 20%;
+        @media (max-width: 700px) {
+          width: 30%;
+        }
+        @media (max-width: 521px) {
+          width: 100%;
+        }
       }
 
       &:nth-child(2) {
@@ -1157,7 +1184,7 @@ footer {
           width: 70%;
         }
         @media (max-width: 521px) {
-          padding: 0 10px;
+          padding: 0;
         }
       }
 
@@ -1182,6 +1209,11 @@ footer {
       &:last-child {
         text-align: right;
         align-self: flex-end;
+        @media (max-width: 521px) {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
       }
     }
   }
@@ -1215,7 +1247,7 @@ footer {
 .cg-schedule-event-title {
   font-weight: 700;
   @media (max-width: 521px) {
-    font-size: 16px;
+    margin: 10px 0;
   }
 
   .cg-top-speaker-name {
@@ -1647,9 +1679,12 @@ footer {
 
 .cg-schedule-table-sb {
   .cg-schedule-table-tr {
-
+    @media (max-width: 520px) {
+      flex-direction: column;
+    }
     .cg-schedule-table-td {
       width: auto !important;
+
       min-height: 52px;
       &:first-child {
         padding-left: 0;
@@ -1888,7 +1923,7 @@ footer {
   border: 1px solid $lightgray2;
   &:hover {
     &:after {
-      
+
     }
   }
 }
