@@ -8997,16 +8997,21 @@ ul {
   height: 720px;
   background-position: center center;
   background-size: cover; }
+  .cg-hotel-banner + footer .cg-join-banner__container {
+    margin-top: 0 !important; }
 
 .cg-hotel-title {
   font-size: 72px;
   line-height: 72px;
   font-weight: 700; }
 
-@media (max-width: 520px) {
-  .cg-join-banner__container {
-    padding: 0 !important;
-    margin-bottom: 20px; } }
+.cg-join-banner__container {
+  margin-top: 300px; }
+  @media (max-width: 520px) {
+    .cg-join-banner__container {
+      margin-top: 0;
+      padding: 0 !important;
+      margin-bottom: 20px; } }
 
 .cg-join-banner {
   background: #4845ED url("../img/banner_join.svg") no-repeat top left;
@@ -9135,6 +9140,9 @@ footer {
   padding-bottom: 100px; }
   footer .container-sm .partners_carousel {
     padding-top: 120px !important; }
+    @media (max-width: 860px) {
+      footer .container-sm .partners_carousel {
+        padding-top: 40px !important; } }
   footer .container-sm + .container-sm .partners_carousel {
     padding-top: 0 !important; }
   footer .cg-coinsbank-logo {
@@ -9162,7 +9170,9 @@ footer {
         margin-bottom: 20px; } }
     footer .cg-subscription input {
       font-size: 14px;
-      height: 40px; }
+      height: 40px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px; }
       footer .cg-subscription input:focus + .input-group-append .btn {
         background: #4845ED url("../img/arrow-right.svg") no-repeat center center;
         border-color: #4845ED; }
@@ -9244,6 +9254,9 @@ footer {
   margin-bottom: 155px;
   display: flex;
   align-items: center; }
+  .cg-page-title .col-12 {
+    min-width: 320px;
+    max-width: 550px; }
   .cg-page-title .h1,
   .cg-page-title h1 {
     font-size: 72px;
@@ -9252,7 +9265,8 @@ footer {
       .cg-page-title .h1,
       .cg-page-title h1 {
         font-size: 60px;
-        line-height: 60px; } }
+        line-height: 60px;
+        margin-bottom: 40px; } }
     @media (max-width: 865px) {
       .cg-page-title .h1,
       .cg-page-title h1 {
@@ -9276,10 +9290,10 @@ footer {
       .cg-page-title .cg-location-name h3 {
         font-size: 18px;
         line-height: 18px; } }
-  @media (max-width: 865px) {
+  @media (max-width: 1024px) {
     .cg-page-title .cg-date-start {
       padding-left: 0; } }
-  @media (max-width: 865px) {
+  @media (max-width: 1024px) {
     .cg-page-title .cg-location-name:before {
       left: -20px; } }
   .cg-page-title .cg-buy-tickets {

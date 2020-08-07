@@ -12,6 +12,12 @@ $(document).ready(function(){
         items:1,
         dots:true
       },
+      420 : {
+        loop:true,
+        margin:20,
+        items:3,
+        dots:true
+      },
       769 : {
         loop:true,
         margin:40,

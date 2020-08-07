@@ -561,6 +561,11 @@ ul {
   height: 720px;
   background-position: center center;
   background-size: cover;
+  &+footer {
+    .cg-join-banner__container {
+      margin-top: 0 !important;
+    }
+  }
 }
 
 .cg-hotel-title {
@@ -570,7 +575,9 @@ ul {
 }
 
 .cg-join-banner__container {
+  margin-top: 300px;
   @media (max-width:520px) {
+    margin-top: 0;
     padding: 0 !important;
     margin-bottom: 20px;
   }
@@ -666,6 +673,7 @@ ul {
   @media (max-width: 860px) {
     margin-bottom: 40px;
     margin-top: 0;
+
   }
   @media (max-width: 520px) {
     padding-bottom: 20px;
@@ -733,7 +741,9 @@ footer {
   .container-sm {
     .partners_carousel {
       padding-top: 120px !important;
-
+      @media (max-width: 860px) {
+        padding-top: 40px !important;
+      }
     }
     &+.container-sm {
       .partners_carousel {
@@ -781,7 +791,8 @@ footer {
     input {
       font-size: 14px;
       height: 40px;
-
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
       &:focus {
         &+.input-group-append .btn {
           background: $blue url('../img/arrow-right.svg') no-repeat center center;
@@ -907,7 +918,10 @@ footer {
   margin-bottom: 155px;
   display: flex;
   align-items: center;
-
+  .col-12 {
+    min-width: 320px;
+    max-width: 550px;
+  }
   .h1,
   h1 {
     font-size: 72px;
@@ -915,6 +929,7 @@ footer {
     @media (max-width: 1024px) {
       font-size: 60px;
       line-height: 60px;
+      margin-bottom: 40px;
     }
     @media (max-width: 865px) {
       margin-bottom: 40px;
@@ -943,13 +958,13 @@ footer {
   }
 
   .cg-date-start {
-    @media (max-width: 865px) {
+    @media (max-width: 1024px) {
       padding-left: 0;
     }
   }
 
   .cg-location-name:before {
-    @media (max-width: 865px) {
+    @media (max-width: 1024px) {
       left: -20px;
     }
   }
