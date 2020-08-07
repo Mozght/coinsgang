@@ -9074,6 +9074,9 @@ ul {
 .owl-carousel .owl-stage {
   display: flex; }
 
+.cg-prevoius-events .owl-stage {
+  display: block; }
+
 .owl-item {
   align-self: center; }
   @media (max-width: 519px) {
@@ -9946,18 +9949,18 @@ footer {
   .owl-theme .owl-nav .owl-prev {
     width: 32px;
     height: 32px;
-    background: url("../img/gallery_arrow_icon.svg") no-repeat center center;
+    background: url("../img/gallery_arrow_icon.svg") no-repeat center bottom;
     transform: rotate(180deg); }
     .owl-theme .owl-nav .owl-prev:hover {
-      background: url("../img/gallery_arrow_icon.svg") no-repeat center center; }
+      background: url("../img/gallery_arrow_icon.svg") no-repeat center bottom; }
     .owl-theme .owl-nav .owl-prev .disabled {
       opacity: 0.5; }
   .owl-theme .owl-nav .owl-next {
     width: 32px;
     height: 32px;
-    background: url("../img/gallery_arrow_icon.svg") no-repeat center center; }
+    background: url("../img/gallery_arrow_icon.svg") no-repeat center top; }
     .owl-theme .owl-nav .owl-next:hover {
-      background: url("../img/gallery_arrow_icon.svg") no-repeat center center; }
+      background: url("../img/gallery_arrow_icon.svg") no-repeat center top; }
     .owl-theme .owl-nav .owl-next .disabled {
       opacity: 0.5; }
 

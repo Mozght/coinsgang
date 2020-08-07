@@ -658,6 +658,10 @@ ul {
   display: flex;
 }
 
+.cg-prevoius-events .owl-stage {
+  display: block;
+}
+
 .owl-item {
   align-self: center;
 
@@ -1844,10 +1848,10 @@ footer {
   .owl-prev {
     width: 32px;
     height: 32px;
-    background:url('../img/gallery_arrow_icon.svg') no-repeat center center;
+    background:url('../img/gallery_arrow_icon.svg') no-repeat center bottom;
     transform: rotate(180deg);
     &:hover {
-      background:url('../img/gallery_arrow_icon.svg') no-repeat center center;
+      background:url('../img/gallery_arrow_icon.svg') no-repeat center bottom;
     }
     .disabled {
       opacity: 0.5;
@@ -1856,9 +1860,9 @@ footer {
   .owl-next{
     width: 32px;
     height: 32px;
-    background:url('../img/gallery_arrow_icon.svg') no-repeat center center;
+    background:url('../img/gallery_arrow_icon.svg') no-repeat center top;
     &:hover {
-      background:url('../img/gallery_arrow_icon.svg') no-repeat center center;
+      background:url('../img/gallery_arrow_icon.svg') no-repeat center top;
     }
     .disabled {
       opacity: 0.5;
