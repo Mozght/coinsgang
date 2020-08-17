@@ -85,7 +85,7 @@ $(document).ready(function(){
 
 
 
-  $('.cg-accordion').on('shown.bs.collapse', function (e) {
+  $('.cg-accordion').on('show.bs.collapse', function (e) {
     $(e.target).prev().addClass('cg-bordered');
   });
 
@@ -95,6 +95,7 @@ $(document).ready(function(){
 
   $(document).on('click','.navbar-toggler',function(){
     $( 'body' ).toggleClass( 'scrollDisable' );
+    $( 'header' ).toggleClass( 'cg-layer-top' );
   });
 
   if ($('body').hasClass('cg-invert')) { //detect not mobile and do some menu animation
@@ -125,22 +126,7 @@ $(document).ready(function(){
     }
   }
 
-  $( ".ajax_form input" ).keyup(function() {
-        var fail = false;
-        $( '.ajax_form' ).find( 'select, textarea, input' ).each(function(){
-            if( ! $( this ).prop( 'required' )){
 
-            } else {
-                if ( ! $( this ).val() ) {
-                    fail = true;
-                }
-            }
-        });
-
-        if ( ! fail ) {
-          $('.ajax_form').find('.btn.disabled').removeClass('disabled').removeAttr('disabled');
-        }
-  });
 
   $(".ajax_form .btn-primary").click(function(e){
     e.preventDefault();
@@ -155,6 +141,74 @@ $(document).ready(function(){
   $('.cg-close-thanks').on('click',function(e){
     e.preventDefault();
     $('#thankyouModal').modal('hide');
-  })
+  });
 
+  $('.cg-subscription .btn').on('click',function(e){
+    e.preventDefault();
+    $('.cg-subscription .form-control').empty();
+    $('.cg-subscription-result').show();
+  });
+});
+
+$(".cg-top-speaker-flip").click(function(e){
+  e.preventDefault();
+
+  var avatar = $(this).find('.cg-imgcontainer').html();
+  var name  = $(this).find('.cg-top-speaker-name').text();
+  var title  = $(this).find('.cg-top-speaker-title').html();
+  var fulltext  = $(this).find('.cg-top-speaker__info-fulltext').html();
+
+  $('#speakerReadMore .cg-speaker-wrapper .cg-imgcontainer').html(avatar);
+  $('#speakerReadMore .cg-speaker-wrapper .cg-top-speaker-name').text(name);
+  $('#speakerReadMore .cg-speaker-wrapper .cg-top-speaker-title').html(title);
+  $('#speakerReadMore .cg-speaker-wrapper .cg-top-speaker-fulltext').html(fulltext);
+
+  $('#speakerReadMore').modal('show');
+
+});
+
+var required = 0;
+
+$('.ajax_form input, .ajax_form select').bind('change keyup blur click', function () {
+  if ( $(this).val() != '' ) {
+    $(this).removeClass('error');
+    $(this).next('.error_name').hide();
+  }
+  var empty = true;
+  var i = 0;
+  $('.ajax_form input').each(function(){
+    if ($(this).prop('required')) {
+      if ($(this).val().trim() == "") {
+        i++
+      }
+    }
+  });
+
+  $('.ajax_form select').each(function(){
+    if ($(this).prop('required')) {
+      if ($(this).val() == null) {
+        i++;
+      }
+
+    }
+  });
+
+  $('.ajax_form input[type=checkbox]').each(function(){
+    if ($(this).prop('required')) {
+      if (!$(this).prop('checked')) {
+        i++
+      }
+    }
+  });
+
+  console.log(i);
+
+
+
+  if ( i == 0 ) {
+    $('.ajax_form').find('.btn.disabled').removeClass('disabled').removeAttr('disabled');
+  }
+  else {
+    $('.ajax_form').find('.btn').addClass('disabled');
+  }
 });

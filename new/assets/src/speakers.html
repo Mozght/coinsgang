@@ -6,6 +6,36 @@
 </head>
 
 <body>
+
+  <div class="modal fade" id="speakerReadMore" tabindex="-1" role="dialog" aria-labelledby="speakerReadMore" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="speakers">
+            <div class="cg-speaker-wrapper">
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="cg-imgcontainer"></div>
+                  <div class="cg-top-speaker-name"></div>
+                  <div class="cg-top-speaker-title"></div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="cg-top-speaker-fulltext">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cg-close-thanks">
+        <button type="button" data-dismiss="modal" aria-label="Close">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="cg-page" style="background-image:url('img/speaker_bg.svg');">
     <header>
       <nav class="navbar navbar-expand-sm show" id="navigation">
@@ -31,6 +61,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Sponsorship</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Buy ticket</a>
+              </li>
             </ul>
             <div class="form-inline my-2 my-lg-0">
               <a href="#" class="btn btn-primary btn-buy">Buy ticket</a>
@@ -45,20 +78,16 @@
           <h1>Speakers</h1>
         </div>
         <div class="col-12 col-md-6">
-          <div class="row">
-            <div class="col-5">
-              <div class="cg-date-start">
-                <div class="h3">25 — 28 September</div>
-              </div>
+          <div class="cg-date-location">
+            <div class="cg-date-start">
+              <div class="h3">25 — 28 September</div>
             </div>
-            <div class="col-7">
-              <div class="cg-location-name">
-                <div class="h3">Belek. Antalya. Turkey</div>
-              </div>
+            <div class="cg-location-name">
+              <div class="h3">Belek. Antalya. Turkey</div>
             </div>
           </div>
           <div class="cg-buy-tickets d-sm-block d-md-none">
-              <a href="#" class="btn btn-primary btn-buy">Buy ticket</a>
+            <a href="#" class="btn btn-primary btn-buy">Buy ticket</a>
           </div>
         </div>
       </div>
@@ -77,16 +106,17 @@
                     <div class="cg-top-speaker-name">John McAfee</div>
                     <div class="cg-top-speaker-title">Founder Ghost Coin, Ghost Phone, <br /> USA</div>
                   </div>
-                </div>
-                <div class="cg-top-speaker__info">
-                  <div class="cg-top-speaker-name">
-                    John McAfee
-                  </div>
-                  <div class="cg-top-speaker-title">
-                    Founder Ghost Coin, Ghost Phone, <br /> USA
-                  </div>
-                  <div class="cg-top-speaker__info-text">
-                    A British-American IT-businessman and political activist, known as a founder of the software company McAfee Associates - the first commercial antivirus software
+                  <div class="cg-top-speaker__info-fulltext">
+                    <p>As a Business Development Representative for the Maker Foundation, Gustav Arentoft focuses on increasing business opportunities throughout Europe, Southeast Asia, and Africa. Prior to joining the organization, Gustav worked in the Fintech sector in Argentina, where he experienced first-hand the need for alternatives to the country's struggling financial system. His academic background includes software development and economics.</p>
+                    <p>The Maker Foundation is the organization facilitating the development of MakerDAO. MakerDAO governs the Maker Protocol and Dai, the world’s first decentralized, collateral-backed stablecoin on the Ethereum blockchain. Dai mitigates volatility through an autonomous system of smart contracts called the Maker Protocol, and through decentralized community governance.</p>
+                    <ul>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://www.linkedin.com/in/gustavarentoft/</a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://twitter.com/GArentoft</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -103,16 +133,17 @@
                     <div class="cg-top-speaker-name">Roger Ver</div>
                     <div class="cg-top-speaker-title">CEO of Bitcoin.com, <br />USA</div>
                   </div>
-                </div>
-                <div class="cg-top-speaker__info">
-                  <div class="cg-top-speaker-name">
-                    Roger Ver
-                  </div>
-                  <div class="cg-top-speaker-title">
-                    CEO of Bitcoin.com, <br />USA
-                  </div>
-                  <div class="cg-top-speaker__info-text">
-                    An early investor in bitcoin, bitcoin-related startups and an early promoter of bitcoin. Bitcoin Cash promoter.
+                  <div class="cg-top-speaker__info-fulltext">
+                    <p>As a Business Development Representative for the Maker Foundation, Gustav Arentoft focuses on increasing business opportunities throughout Europe, Southeast Asia, and Africa. Prior to joining the organization, Gustav worked in the Fintech sector in Argentina, where he experienced first-hand the need for alternatives to the country's struggling financial system. His academic background includes software development and economics.</p>
+                    <p>The Maker Foundation is the organization facilitating the development of MakerDAO. MakerDAO governs the Maker Protocol and Dai, the world’s first decentralized, collateral-backed stablecoin on the Ethereum blockchain. Dai mitigates volatility through an autonomous system of smart contracts called the Maker Protocol, and through decentralized community governance.</p>
+                    <ul>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://www.linkedin.com/in/gustavarentoft/</a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://twitter.com/GArentoft</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -130,17 +161,17 @@
                     <div class="cg-top-speaker-title">Co-Founder of BTCC,
                       <br />China</div>
                   </div>
-                </div>
-                <div class="cg-top-speaker__info">
-                  <div class="cg-top-speaker-name">
-                    Bobby Lee
-                  </div>
-                  <div class="cg-top-speaker-title">
-                    Co-Founder of BTCC,
-                      <br />China
-                  </div>
-                  <div class="cg-top-speaker__info-text">
-                    The CEO and co-founder of the first bitcoin exchange in China and the leading bitcoin financial platform worldwide.
+                  <div class="cg-top-speaker__info-fulltext">
+                    <p>As a Business Development Representative for the Maker Foundation, Gustav Arentoft focuses on increasing business opportunities throughout Europe, Southeast Asia, and Africa. Prior to joining the organization, Gustav worked in the Fintech sector in Argentina, where he experienced first-hand the need for alternatives to the country's struggling financial system. His academic background includes software development and economics.</p>
+                    <p>The Maker Foundation is the organization facilitating the development of MakerDAO. MakerDAO governs the Maker Protocol and Dai, the world’s first decentralized, collateral-backed stablecoin on the Ethereum blockchain. Dai mitigates volatility through an autonomous system of smart contracts called the Maker Protocol, and through decentralized community governance.</p>
+                    <ul>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://www.linkedin.com/in/gustavarentoft/</a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://twitter.com/GArentoft</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -157,16 +188,17 @@
                     <div class="cg-top-speaker-name">Brock Pierce</div>
                     <div class="cg-top-speaker-title">Bitcoin Foundation, Puerto Rico, <br />USA</div>
                   </div>
-                </div>
-                <div class="cg-top-speaker__info">
-                  <div class="cg-top-speaker-name">
-                    Brock Pierce
-                  </div>
-                  <div class="cg-top-speaker-title">
-                  Bitcoin Foundation, Puerto Rico, <br />USA
-                  </div>
-                  <div class="cg-top-speaker__info-text">
-                    An entrepreneur, venture capitalist, and philanthropist. He has been a pioneer and innovator in digital currency markets since 1999 and has raised more than $5B for the companies he has co-founded.
+                  <div class="cg-top-speaker__info-fulltext">
+                    <p>As a Business Development Representative for the Maker Foundation, Gustav Arentoft focuses on increasing business opportunities throughout Europe, Southeast Asia, and Africa. Prior to joining the organization, Gustav worked in the Fintech sector in Argentina, where he experienced first-hand the need for alternatives to the country's struggling financial system. His academic background includes software development and economics.</p>
+                    <p>The Maker Foundation is the organization facilitating the development of MakerDAO. MakerDAO governs the Maker Protocol and Dai, the world’s first decentralized, collateral-backed stablecoin on the Ethereum blockchain. Dai mitigates volatility through an autonomous system of smart contracts called the Maker Protocol, and through decentralized community governance.</p>
+                    <ul>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://www.linkedin.com/in/gustavarentoft/</a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://twitter.com/GArentoft</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -184,17 +216,17 @@
                     <div class="cg-top-speaker-title">Creator of Litecoin,
                       <br />USA</div>
                   </div>
-                </div>
-                <div class="cg-top-speaker__info">
-                  <div class="cg-top-speaker-name">
-                    Charlie Lee
-                  </div>
-                  <div class="cg-top-speaker-title">
-                    Creator of Litecoin,
-                      <br />USA
-                  </div>
-                  <div class="cg-top-speaker__info-text">
-                    A computer scientist, best known as the creator of Litecoin. He serves as the chairman and managing director of the Litecoin Foundation.
+                  <div class="cg-top-speaker__info-fulltext">
+                    <p>As a Business Development Representative for the Maker Foundation, Gustav Arentoft focuses on increasing business opportunities throughout Europe, Southeast Asia, and Africa. Prior to joining the organization, Gustav worked in the Fintech sector in Argentina, where he experienced first-hand the need for alternatives to the country's struggling financial system. His academic background includes software development and economics.</p>
+                    <p>The Maker Foundation is the organization facilitating the development of MakerDAO. MakerDAO governs the Maker Protocol and Dai, the world’s first decentralized, collateral-backed stablecoin on the Ethereum blockchain. Dai mitigates volatility through an autonomous system of smart contracts called the Maker Protocol, and through decentralized community governance.</p>
+                    <ul>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://www.linkedin.com/in/gustavarentoft/</a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://twitter.com/GArentoft</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -212,17 +244,17 @@
                     <div class="cg-top-speaker-title">CEO of Smart Valor,
                       <br />Switzerland</div>
                   </div>
-                </div>
-                <div class="cg-top-speaker__info">
-                  <div class="cg-top-speaker-name">
-                    Olga Feldmeier
-                  </div>
-                  <div class="cg-top-speaker-title">
-                    CEO of Smart Valor,
-                      <br />Switzerland
-                  </div>
-                  <div class="cg-top-speaker__info-text">
-                    CEO of a Swiss-based blockchain start-up building a decentralized marketplace for tokenized alternative investments. Olga has extensive experience working in the banking and financial services sector.
+                  <div class="cg-top-speaker__info-fulltext">
+                    <p>As a Business Development Representative for the Maker Foundation, Gustav Arentoft focuses on increasing business opportunities throughout Europe, Southeast Asia, and Africa. Prior to joining the organization, Gustav worked in the Fintech sector in Argentina, where he experienced first-hand the need for alternatives to the country's struggling financial system. His academic background includes software development and economics.</p>
+                    <p>The Maker Foundation is the organization facilitating the development of MakerDAO. MakerDAO governs the Maker Protocol and Dai, the world’s first decentralized, collateral-backed stablecoin on the Ethereum blockchain. Dai mitigates volatility through an autonomous system of smart contracts called the Maker Protocol, and through decentralized community governance.</p>
+                    <ul>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://www.linkedin.com/in/gustavarentoft/</a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://twitter.com/GArentoft</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -240,17 +272,17 @@
                     <div class="cg-top-speaker-title">Evercoin Exchange; Gumi Ventures,
                       <br />USA - Japan</div>
                   </div>
-                </div>
-                <div class="cg-top-speaker__info">
-                  <div class="cg-top-speaker-name">
-                    Miko Matsumura
-                  </div>
-                  <div class="cg-top-speaker-title">
-                    Evercoin Exchange; Gumi Ventures,
-                      <br />USA - Japan
-                  </div>
-                  <div class="cg-top-speaker__info-text">
-                    A founder of crypto exchange Evercoin, a General Partner with Gumi Cryptos and a Venture Partner with BitBull Capital, a cryptocurrency fund-of-funds. He is also an advisor to Arrington XRP Capital.
+                  <div class="cg-top-speaker__info-fulltext">
+                    <p>As a Business Development Representative for the Maker Foundation, Gustav Arentoft focuses on increasing business opportunities throughout Europe, Southeast Asia, and Africa. Prior to joining the organization, Gustav worked in the Fintech sector in Argentina, where he experienced first-hand the need for alternatives to the country's struggling financial system. His academic background includes software development and economics.</p>
+                    <p>The Maker Foundation is the organization facilitating the development of MakerDAO. MakerDAO governs the Maker Protocol and Dai, the world’s first decentralized, collateral-backed stablecoin on the Ethereum blockchain. Dai mitigates volatility through an autonomous system of smart contracts called the Maker Protocol, and through decentralized community governance.</p>
+                    <ul>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://www.linkedin.com/in/gustavarentoft/</a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://twitter.com/GArentoft</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -268,16 +300,17 @@
                     <div class="cg-top-speaker-title">Blockchain Consultant / Researcher,
                       <br />USA</div>
                   </div>
-                </div>
-                <div class="cg-top-speaker__info">
-                  <div class="cg-top-speaker-name">
-                    Tone Vays
-                  </div>
-                  <div class="cg-top-speaker-title">
-                    Blockchain Consultant / Researcher, <br />USA
-                  </div>
-                  <div class="cg-top-speaker__info-text">
-                    A former Wall Street trader and vice president of JP Morgan Chase, the American financial holding, and is currently an expert in economic trends, trading, risk analysis, and cryptocurrency.
+                  <div class="cg-top-speaker__info-fulltext">
+                    <p>As a Business Development Representative for the Maker Foundation, Gustav Arentoft focuses on increasing business opportunities throughout Europe, Southeast Asia, and Africa. Prior to joining the organization, Gustav worked in the Fintech sector in Argentina, where he experienced first-hand the need for alternatives to the country's struggling financial system. His academic background includes software development and economics.</p>
+                    <p>The Maker Foundation is the organization facilitating the development of MakerDAO. MakerDAO governs the Maker Protocol and Dai, the world’s first decentralized, collateral-backed stablecoin on the Ethereum blockchain. Dai mitigates volatility through an autonomous system of smart contracts called the Maker Protocol, and through decentralized community governance.</p>
+                    <ul>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://www.linkedin.com/in/gustavarentoft/</a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/GArentoft" target="_blank" >https://twitter.com/GArentoft</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -286,13 +319,13 @@
         </div>
       </div>
       <div class="cg-submit-sponsor">
-        <h3>Submit to sponsor</h3>
-        <p>Request sponsorship options and boost your brand together with the CoinsGang Weekend event.</p>
-        <a href="#" class="btn btn-primary">Submit to sponsor</a>
+        <h3>Submit to speak</h3>
+        <p>Is your story worth sharing? Share your expertise at the #CoinsGang Weekend event.</p>
+        <a href="#" class="btn btn-primary">Submit to speak</a>
       </div>
     </div>
   </div>
-    //= template/footer_page.html
+    //= template/footer.html
 </body>
 
 </html>

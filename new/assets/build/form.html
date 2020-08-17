@@ -11,41 +11,42 @@
 
 <body class="cg-invert">
   <div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog" aria-labelledby="thankyouModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="thanks">
-                  <div class="cg-thanks-wrapper">
-                    <h1>Thank you for your request!</h1>
-                    <p>One of us will get back in touch with you soon!</p>
-                    <ul>
-                      <li><a href="#">Back to main page</a></li>
-                    </ul>
-                  </div>
-
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="thanks">
+            <div class="cg-thanks-wrapper">
+              <h1>Thank you for your request!</h1>
+              <p>One of us will get back in touch with you soon!</p>
+              <ul>
+                <li><a href="#">Back to main page</a></li>
+              </ul>
             </div>
+
           </div>
         </div>
-        <div class="cg-close-thanks">
-          <button type="button"  data-dismiss="modal" aria-label="Close">
-            Close
-          </button>
-        </div>
+      </div>
+      <div class="cg-close-thanks">
+        <button type="button" data-dismiss="modal" aria-label="Close">
+          Close
+        </button>
+      </div>
     </div>
   </div>
+
+  <nav class="navbar navbar-expand-sm show" id="navigation">
     <div class="container-sm">
-      <nav class="navbar navbar-expand-sm show" id="navigation">
-        <a class="navbar-brand" href="#"><img src="img/logo_invert.svg" alt="" /></a>
-        <div class="collapse navbar-collapse" id="navbarToggler">
-          <div class="form-inline my-2 my-lg-0">
-            <p class="cg-event-title-simple">#CoinsGang Weekend<br/>Not your average blockchain event</p>
-          </div>
+      <a class="navbar-brand" href="#"><img src="img/logo_invert.svg" alt="" /></a>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <div class="form-inline my-2 my-lg-0">
+          <p class="cg-event-title-simple">#CoinsGang Weekend<br />Not your average blockchain event</p>
         </div>
-      </nav>
+      </div>
     </div>
+  </nav>
   <div class="container-sm cg-privacy_terms">
     <div class="row">
-      <div class="col-sm-8 offset-sm-2">
+      <div class="col-sm-12 cg-form-general">
         <h1>Submit to speak</h1>
         <form class="ajax_form">
           <div class="row cg-form">
@@ -65,75 +66,70 @@
               </div>
               <div class="form-group">
                 <label for="inp4">Social profile link</label>
-                <input type="text" class="form-control" id="inp4" aria-describedby="inp4" placeholder="">
+                <input type="text" class="form-control" id="inp4" aria-describedby="inp4" placeholder="" required="required">
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
                 <label for="inp5">Company name</label>
-                <input type="text" class="form-control" id="inp5" aria-describedby="inp5" placeholder="">
+                <input type="text" class="form-control" id="inp5" aria-describedby="inp5" placeholder="" required="required">
               </div>
               <div class="form-group">
                 <label for="inp6">Company type</label>
-                <select>
+                <select required="required">
                   <option>
-                      Investor/ Fund
+                    Investor/ Fund
                   </option>
                   <option>
-                      Exchange
+                    Exchange
                   </option>
                   <option>
-                      Startup
+                    Startup
                   </option>
                   <option>
-                      Journalist / Media representative
+                    Journalist / Media representative
                   </option>
                   <option>
-                      Blogger / Influencer
+                    Blogger / Influencer
                   </option>
                   <option>
-                      Attorney / Lawyer
+                    Attorney / Lawyer
                   </option>
                   <option>
-                      Government authority
+                    Government authority
                   </option>
                   <option>
-                      Other
+                    Other
                   </option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="inp7">Company website</label>
-                <input type="text" class="form-control" id="inp7" aria-describedby="inp7" placeholder="">
+                <input type="text" class="form-control" id="inp7" aria-describedby="inp7" placeholder="" required="required">
               </div>
               <div class="form-group">
                 <label for="inp8">Position</label>
-                <input type="text" class="form-control" id="inp8" aria-describedby="inp8" placeholder="">
+                <input type="text" class="form-control" id="inp8" aria-describedby="inp8" placeholder="" required="required">
               </div>
             </div>
           </div>
           <div class="row cg-form-controls">
-              <div class="col-sm-6">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">I agree to <a href="#">Privacy Policy</a> and <a href="#">Public offer</a></label>
-                </div>
+            <div class="col-sm-6">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="checkbox1" class="custom-control-input" id="customCheck1" value="on" required="required">
+                <label class="custom-control-label" for="customCheck1">I agree to <a href="#">Privacy Policy</a> and <a href="#">Public offer</a></label>
               </div>
-              <div class="col-sm-3 cg-required-text" >
-                All fields are required
-              </div>
-              <div class="col-sm-3">
-                <a href="#" class="btn btn-primary disabled" disabled>Send request</a>
-              </div>
+            </div>
+            <div class="col-sm-3 cg-required-text">
+              All fields are required
+            </div>
+            <div class="col-sm-3 cg-btn-send-form">
+              <a href="#" class="btn btn-primary disabled" disabled>Send request</a>
+            </div>
 
           </div>
         </form>
-        <h5> buttons </h5>
-        <div class="row cg-form-controls">
-          <div class="col-sm-12 ">
-            <a href="#" class="btn btn-primary">Button Primary</a> &nbsp;&nbsp; <a href="#" class="btn btn-primary disabled">Button Disabled</a>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>

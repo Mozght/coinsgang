@@ -13,6 +13,7 @@
     "intl-tel-input": "^16.0.11",
     "ismobilejs": "^1.1.1",
     "jquery": "^3.4.1",
+    "jquery-validation": "^1.19.2",
     "jquery.ui.widget": "^1.10.3",
     "owl.carousel2": "^2.2.1",
     "popper.js": "^1.14.7",
